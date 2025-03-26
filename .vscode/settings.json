@@ -1,12 +1,15 @@
 {
   "files.exclude": {
     "**/*.css.map": true,
+    "**/*.min.css": true,
+    "**/*.min.js": true,
     "package-lock.json": true,
     "**/node_modules": true
   },
   "search.exclude": {
-    "**/*.css": true,
     "**/*.css.map": true,
+    "**/*.min.css": true,
+    "**/*.min.js": true,
     "package.json": true,
     "package-lock.json": true,
     "**/node_modules": true
@@ -16,6 +19,9 @@
   },
   "files.associations": {
     "*.liquid": "liquid"
+  },
+  "emmet.includeLanguages": {
+    "liquid": "html"
   },
   "tailwindCSS.experimental.classRegex": [
     ["class\\s*=\\s*\"([^\"]*)\"", "g"]

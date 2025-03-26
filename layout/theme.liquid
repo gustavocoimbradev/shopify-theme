@@ -2,12 +2,12 @@
 <html>
     <head>
         {{ content_for_header }}
-        {{ 'style.css' | asset_url | stylesheet_tag }}
+        {{ 'style.min.css' | asset_url | stylesheet_tag }}
     </head>
     <body>
         {% render 'header' %}
         {{ content_for_layout }}
         {% render 'footer' %}
-        {{ 'script.js' | asset_url | script_tag }}
+        {{ 'script.min.js' | asset_url | script_tag }}
     </body>
 </html>
