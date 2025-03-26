@@ -2,12 +2,12 @@
 <html>
     <head>
         {{ content_for_header }}
-        {{ 'style.min.css' | asset_url | stylesheet_tag }}
+        <link rel="stylesheet" href="{{ 'style.min.css' | asset_url }}">
     </head>
     <body>
         {% render 'header' %}
         {{ content_for_layout }}
         {% render 'footer' %}
-        {{ 'script.min.js' | asset_url | script_tag }}
+        <script src="{{ 'script.min.js' | asset_url }}" defer></script>
     </body>
 </html>
