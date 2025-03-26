@@ -2,12 +2,6 @@
 node_modules/
 package-lock.json
 
-# VSCode
-.vscode/
-
-# Shopify
-.shopify/
-
 # Build
 dist/
 build/
