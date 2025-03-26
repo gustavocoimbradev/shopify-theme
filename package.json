@@ -4,7 +4,9 @@
     "scripts": {
         "dev": "concurrently \"shopify theme dev --store=telecenter-eletronica\" \"npx @tailwindcss/cli -i ./assets/tailwind.css -o ./assets/style.css --watch\"",
         "build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/style.css --minify",
-        "prod": "npm run build && shopify theme push --theme \"telecenter-eletronica\" --allow-live --force"
+        "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force",
+        "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
+        "deploy": "npm run build && npm run git && npm run prod"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.0.17",
