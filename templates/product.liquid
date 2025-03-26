@@ -1,0 +1,10 @@
+<h1>Produto</h1>
+
+<h2>{{ product.title }}</h2>
+<img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="250" height="250">
+<p>{{ product.price | money }}</p>
+
+<form method="post" action="/cart/add">
+<input type="hidden" name="id" value="{{ product.variants.first.id }}">
+<button type="submit">Adicionar ao carrinho</button>
+</form>

@@ -1,0 +1,21 @@
+{
+    "name": "telecenter-eletronica",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "concurrently \"shopify theme dev --store=telecenter-eletronica\" \"npx @tailwindcss/cli -i ./assets/tailwind.css -o ./assets/style.css --watch\"",
+        "build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/style.css --minify",
+        "prod": "npm run build && shopify theme push --theme \"telecenter-eletronica\" --allow-live --force"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.0.17",
+        "autoprefixer": "^10.4.21",
+        "chokidar-cli": "^3.0.0",
+        "concurrently": "^9.1.2",
+        "postcss": "^8.5.3",
+        "postcss-cli": "^11.0.1",
+        "tailwindcss": "^4.0.17"
+    },
+    "dependencies": {
+        "@tailwindcss/cli": "^4.0.17"
+    }
+}
