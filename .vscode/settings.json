@@ -14,9 +14,9 @@
     "package-lock.json": true,
     "**/node_modules": true
   },
-  "tailwindCSS.includeLanguages": {
-    "liquid": "html"
-  },
+  // "tailwindCSS.includeLanguages": {
+  //   "liquid": "html"
+  // },
   "files.associations": {
     "*.liquid": "liquid"
   },
