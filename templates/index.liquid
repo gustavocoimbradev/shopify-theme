@@ -1,3 +1,12 @@
+<section>
+    <div class="container">
+        <figure>
+            <img class="rounded-3xl" src="{{ 'banner.png' | asset_url }}" alt="" width="1280" height="570">
+        </figure>
+    </div>
+</section>
+
+{% comment %} 
 {% for product in collections.all.products %}
     <a href="{{ product.url }}">
         <h2>{{ product.title }}</h2>
@@ -5,4 +14,4 @@
         <p>{{ product.price | money }}</p>
     </a>
 {% endfor %}
-  
+   {% endcomment %}
