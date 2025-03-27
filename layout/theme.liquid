@@ -2,7 +2,8 @@
 <html>
     <head>
         {{ content_for_header }}
-        <link rel="stylesheet" href="{{ 'style.min.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ '' | append: template.name | append: '.min.css' | asset_url }}">
     </head>
     <body>
         {% render 'header' %}

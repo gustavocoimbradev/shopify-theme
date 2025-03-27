@@ -1,18 +1,23 @@
 {
   "files.exclude": {
+    "**/assets": true,
     "**/*.css.map": true,
     "**/*.min.css": true,
     "**/*.min.js": true,
     "package-lock.json": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "tailwind.config.js": true
   },
   "search.exclude": {
+    "**/assets": true,
     "**/*.css.map": true,
     "**/*.min.css": true,
     "**/*.min.js": true,
     "package.json": true,
     "package-lock.json": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "tailwind.config.js": true,
+    "gulpfile.js": true
   },
   // "tailwindCSS.includeLanguages": {
   //   "liquid": "html"
