@@ -5,7 +5,7 @@
         "dev": "concurrently \"gulp\" \"shopify theme dev --store=telecenter-eletronica\"",
         "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force",
         "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
-        "deploy": "npm run git && npm run prod"
+        "publish": "npm run git && npm run prod"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.0.17",
