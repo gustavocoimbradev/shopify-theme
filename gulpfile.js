@@ -5,46 +5,26 @@ const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const plumber = require("gulp-plumber");
 const fs = require("fs");
-const { execSync } = require("child_process");
 
 const paths = {
   scss: "src/scss/*.scss",
   js: "src/js/*.js",
   img: "src/img/**/*",
+  liquid: "**/*.liquid",
   assets: "assets/"
 };
 
-gulp.task("scss", function (done) {
-  gulp.src(paths.scss)
+gulp.task("scss", function () {
+  return gulp.src(paths.scss)
     .pipe(plumber())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-      path.extname = ".css";
-    }))
     .pipe(sass())
-    .pipe(gulp.dest(paths.assets))
-    .on("end", () => {
-      fs.readdirSync(paths.assets)
-        .filter(f => f.endsWith(".min.css"))
-        .forEach(file => {
-          const filePath = `${paths.assets}${file}`;
-          const content = fs.readFileSync(filePath, "utf8");
-
-          if (!content.startsWith('@import "tailwindcss";')) {
-            fs.writeFileSync(filePath, '@import "tailwindcss";\n' + content, "utf8");
-          }
-
-          const tempPath = `${filePath}.tailwind`;
-          execSync(`npx tailwindcss -i "${filePath}" -o "${tempPath}" --minify`, { stdio: "inherit" });
-          fs.renameSync(tempPath, filePath);
-        });
-      done();
-    });
+    .pipe(cleanCSS())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest(paths.assets));
 });
 
 gulp.task("js", function () {
-  return gulp
-    .src(paths.js)
+  return gulp.src(paths.js)
     .pipe(plumber())
     .pipe(rename({ suffix: ".min" }))
     .pipe(terser())
@@ -52,15 +32,19 @@ gulp.task("js", function () {
 });
 
 gulp.task("img", function () {
-  return gulp
-    .src(paths.img)
+  return gulp.src(paths.img)
     .pipe(gulp.dest(paths.assets));
+});
+
+gulp.task("liquid", function (done) {
+  gulp.series("scss")(done);
 });
 
 gulp.task("watch", function () {
   gulp.watch(paths.scss, gulp.series("scss"));
   gulp.watch(paths.js, gulp.series("js"));
   gulp.watch(paths.img, gulp.series("img"));
+  gulp.watch(paths.liquid, gulp.series("liquid"));
 });
 
 gulp.task("default", gulp.parallel("scss", "js", "img", "watch"));

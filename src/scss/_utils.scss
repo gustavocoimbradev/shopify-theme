@@ -1,0 +1,39 @@
+// Colors
+$colors: (
+  yellow: (
+    100: #FFF9DB,
+    200: #FCE97B,
+    300: #F1CD32
+  ),
+  blue: (
+    100: #E0E7FF,
+    200: #A5B4FC,
+    300: #272D8F
+  ),
+  navy: (
+    100: #1E1B4B,
+    200: #15184C
+  ),
+  gray: (
+    100: #F3F4F6,
+    200: #D1D5DB,
+    300: #6B7280
+  )
+);
+
+// Functions
+@function color($name, $shade) {
+    @if map-has-key($colors, $name) and map-has-key(map-get($colors, $name), $shade) {
+      @return map-get(map-get($colors, $name), $shade);
+    }
+    @warn "Cor `#{$name}-#{$shade}` não encontrada!";
+    @return null;
+}
+  
+// Mixins
+@mixin mobile {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+  
