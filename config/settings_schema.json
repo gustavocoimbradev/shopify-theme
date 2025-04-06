@@ -6,6 +6,10 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo da loja"
+      },
+      {
+        "type": "paragraph",
+        "content": "<a href=\"https://admin.shopify.com/store/telecenter-eletronica/content/menus\">Editar menus</a>"
       }
     ]
   }
