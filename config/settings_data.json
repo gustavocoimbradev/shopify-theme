@@ -7,8 +7,8 @@
             "type": "hero",
             "settings": {}
           },
-          "navigation": {
-            "type": "navigation",
+          "primary-menu": {
+            "type": "primary-menu",
             "settings": {}
           }
         }
