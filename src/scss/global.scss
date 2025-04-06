@@ -40,19 +40,30 @@ body {
         gap: 40px;
         >li {
           >a {
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             display: flex;
             align-items: center;
             gap: 13px;
+            position: relative;
+            &::before {
+              content: '';
+              width: 0px;
+              height: 1px;
+              background: color(primary, 100);
+              position: absolute;
+              top: 100%;
+              left: 0;
+              transition: all .3s;
+            }
           }
           &.has-children {
             position: relative;
-            >a {
+            >a { 
               &::after {
-                content: url('data:image/svg+xml,<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 8L2 14" stroke="%23333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                content: url('data:image/svg+xml,<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
                 transition: all .3s;
                 display: inline-block;
               }
@@ -63,30 +74,46 @@ body {
               opacity: 0;
               width: 100%;
               border-radius: 10px;
-              background: #FFF;
-              padding: 12px;
+              background: #FFF; 
               pointer-events: none;
               transition: all .3s;
+              padding: 12px;
+              &::before {
+                content: ''; 
+                top: -15px; 
+                height: 15px;
+                width: 100%;
+                position: absolute;
+              }
               >li {
                 >a {
                   display: block;
-                  padding: 4px 0;
+                  padding: 6px 8px; 
                 }
               }
-            }
+            }  
             &:hover {
               >a {
                 &::after {
-                  transform: rotate(90deg);
+                  content: url('data:image/svg+xml,<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="%23272D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                  transform: rotate(90deg); 
                 }
-              }
-              >ul {
-                opacity: 1;
-                top: 100%;
-                pointer-events: unset;
               }
             }
           }
+          &:hover {
+            >a {
+              color: color(primary, 100);
+              &::before {
+                width: 100%;
+              }
+            }
+            >ul {
+              opacity: 1; 
+              top: calc(100% + 15px);
+              pointer-events: unset;
+            }
+          } 
         }
       }
     } 
