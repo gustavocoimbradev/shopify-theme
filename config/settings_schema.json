@@ -1,13 +1,1 @@
-[
-    {
-      "name": "Global settings",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Logo da loja"
-        }
-      ]
-    }
-  ]
-  
+[]
