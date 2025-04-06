@@ -2,15 +2,10 @@
 <html>
     <head>
         {{ content_for_header }}
-        <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
-        {% if template.name and template.name != blank %}
-            <link rel="stylesheet" href="{{ template.name | append: '.min.css' | asset_url }}">
-        {% endif %}
     </head>
     <body>
         {% render 'header' %}
         {{ content_for_layout }}
         {% render 'footer' %}
-        <script src="{{ 'script.min.js' | asset_url }}" defer></script>
     </body>
 </html>
