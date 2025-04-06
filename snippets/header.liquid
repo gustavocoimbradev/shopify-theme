@@ -15,7 +15,7 @@
             <nav>
                 <ul>
                     {% for link in linklists.main-menu.links %}
-                        <li>
+                        <li class="{% if link.links != blank %} has-children {% endif %}">
                             <a href="{{ link.url }}">
                                 {{ link.title }}
                             </a>

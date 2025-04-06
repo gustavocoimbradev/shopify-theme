@@ -44,7 +44,7 @@ body {
             font-weight: 700;
             line-height: normal;
           }
-          &:has(>ul) {
+          &.has-children {
             >a {
               color: red;
               &::after {
