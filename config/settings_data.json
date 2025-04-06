@@ -7,10 +7,6 @@
             "type": "hero",
             "settings": {}
           },
-          "primary-menu": {
-            "type": "primary-menu",
-            "settings": {}
-          }
         }
       }
     }
