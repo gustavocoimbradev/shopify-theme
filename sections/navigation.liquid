@@ -23,22 +23,22 @@
   
   {% schema %}
   {
-    "name": "Menu com subcoleções",
+    "name": "Menu primário",
     "settings": [],
     "blocks": [
       {
         "type": "menu_item",
-        "name": "Item de menu com subcoleções",
+        "name": "Item",
         "settings": [
           {
             "type": "collection",
             "id": "parent",
-            "label": "Coleção principal"
+            "label": "Item"
           },
           {
             "type": "collection_list",
             "id": "subcollections",
-            "label": "Subcoleções"
+            "label": "Sub item"
           }
         ]
       }
@@ -46,7 +46,7 @@
     "max_blocks": 10,
     "presets": [
       {
-        "name": "Menu com subcategorias",
+        "name": "Menu primário",
         "category": "Navegação"
       }
     ]
