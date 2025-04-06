@@ -67,6 +67,12 @@ body {
               padding: 12px;
               pointer-events: none;
               transition: all .3s;
+              >li {
+                >a {
+                  display: block;
+                  padding: 4px 0;
+                }
+              }
             }
             &:hover {
               >a {
