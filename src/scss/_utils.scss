@@ -1,23 +1,21 @@
 // Colors
 $colors: (
-  yellow: (
-    100: #FFF9DB,
-    200: #FCE97B,
-    300: #F1CD32
+  primary: (
+    100: #00429D,
+    200: #272D8F,
+    300: #15184C
   ),
-  blue: (
-    100: #E0E7FF,
-    200: #A5B4FC,
-    300: #272D8F
+  secondary: (
+    100: #F1CD32,
   ),
-  navy: (
-    100: #1E1B4B,
-    200: #15184C
+  tertiary: (
+    100: #D93332,
   ),
-  gray: (
-    100: #F3F4F6,
-    200: #D1D5DB,
-    300: #6B7280
+  neutral: (
+    light-gray: #F5F5F5,
+    dark-gray: #DEDEDE,
+    black: #000,
+    white: #fff
   )
 );
 

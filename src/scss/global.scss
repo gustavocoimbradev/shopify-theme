@@ -10,14 +10,6 @@
 } 
 
 body {
-    background: color(yellow, 100);
+    //background: color(yellow, 100);
 }
 
-.button {
-    padding: 12px 24px;
-    background: color(yellow, 100);
-    color: white;
-    @include mobile {
-        padding: 10px 20px;
-    }
-}
