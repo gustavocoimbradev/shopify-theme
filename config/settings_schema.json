@@ -3,12 +3,6 @@
       "name": "telecenter-eletronica",
       "settings": [
         {
-          "type": "text",
-          "id": "versao",
-          "label": "Versão do tema",
-          "default": "1.0"
-        },
-        {
           "type": "image_picker",
           "id": "logo",
           "label": "Logo da loja"
