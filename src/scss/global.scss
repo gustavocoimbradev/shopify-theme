@@ -41,12 +41,14 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+            display: flex;
+            align-items: center;
+            gap: 13px;
           }
           &.has-children {
             >a {
               &::after {
                 content: url('data:image/svg+xml,<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 8L2 14" stroke="%23333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-                margin-left: 13px;
                 transition: all .3s;
                 display: inline-block;
               }
