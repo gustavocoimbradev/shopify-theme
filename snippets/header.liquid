@@ -1,27 +1,13 @@
-<header>
+<header class="header">
     <div class="container">
-        <div>
+        <div class="header__top">
             <a href="{{ settings.logo }}">
                 <img src="{{ settings.logo | img_url: 'medium' }}" alt="{{ shop.name }} logo">
             </a>
         </div>
-        <div>
-
-        </div> 
+        <div class="header__bottom">
+            {% section 'menu' %}
+        </div>
     </div>
 </header>
 
-{% schema %}
-[
-    {
-        "name": "Layout",
-        "settings": [
-        {
-            "type": "image_picker",
-            "id": "logo",
-            "label": "Logo da loja"
-        }
-        ]
-    }
-]
-{% endschema %}

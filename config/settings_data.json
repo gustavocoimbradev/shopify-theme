@@ -6,6 +6,10 @@
           "hero": {
             "type": "hero",
             "settings": {}
+          },
+          "navigation": {
+            "type": "navigation",
+            "settings": {}
           }
         }
       }

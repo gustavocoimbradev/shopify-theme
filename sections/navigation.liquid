@@ -1,0 +1,55 @@
+<nav>
+    <ul>
+      {% for block in section.blocks %}
+        {% assign parent = block.settings.parent %}
+        {% assign children = block.settings.subcollections %}
+        {% if parent %}
+          <li>
+            <a href="{{ parent.url }}">{{ parent.title }}</a>
+            {% if children.size > 0 %}
+              <ul>
+                {% for child in children %}
+                  <li>
+                    <a href="{{ child.url }}">{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  
+  {% schema %}
+  {
+    "name": "Menu com subcoleções",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "menu_item",
+        "name": "Item de menu com subcoleções",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "parent",
+            "label": "Coleção principal"
+          },
+          {
+            "type": "collection_list",
+            "id": "subcollections",
+            "label": "Subcoleções"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 10,
+    "presets": [
+      {
+        "name": "Menu com subcategorias",
+        "category": "Navegação"
+      }
+    ]
+  }
+  {% endschema %}
+  
