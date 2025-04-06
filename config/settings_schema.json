@@ -1,11 +1,16 @@
 [
   {
-    "name": "Global settings",
+    "name": "Configurações globais",
     "settings": [
       {
         "type": "image_picker",
         "id": "logo",
         "label": "Logo da loja"
+      },
+      {
+        "type": "link_list",
+        "id": "primary_menu",
+        "label": "Menu primário"
       }
     ]
   }
