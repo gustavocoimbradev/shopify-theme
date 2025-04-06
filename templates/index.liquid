@@ -1,11 +1,2 @@
 {% section 'hero' %}
 
-{% comment %} 
-{% for product in collections.all.products %}
-    <a href="{{ product.url }}">
-        <h2>{{ product.title }}</h2>
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="250" height="250">
-        <p>{{ product.price | money }}</p>
-    </a>
-{% endfor %}
-   {% endcomment %}
