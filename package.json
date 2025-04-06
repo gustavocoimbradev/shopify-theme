@@ -6,7 +6,7 @@
         "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force",
         "preview": "shopify theme push --unpublished --force",
         "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
-        "publish": "npm run git && npm run preview"
+        "publish": "npm run git && npm run prod"
     },
     "devDependencies": {
         "concurrently": "^9.1.2",
