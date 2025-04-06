@@ -1,7 +1,14 @@
 [
     {
       "name": "Telecenter",
-      "settings": []
+      "settings": [
+        {
+          "type": "text",
+          "id": "versao",
+          "label": "Versão do tema",
+          "default": "1.0"
+        }
+      ]
     }
   ]
   
