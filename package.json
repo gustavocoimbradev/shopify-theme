@@ -4,9 +4,9 @@
     "scripts": {
         "dev": "concurrently \"gulp\" \"shopify theme dev --store=telecenter-eletronica\"",
         "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force",
-        "preview": "shopify theme push --unpublished --force",
+        "preview": "shopify theme push --unpublished --theme 178192580902 --force",
         "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
-        "publish": "npm run git && npm run prod"
+        "publish": "npm run git && npm run preview"
     },
     "devDependencies": {
         "concurrently": "^9.1.2",
