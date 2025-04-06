@@ -10,12 +10,10 @@
   outline: none;
   border: none;
   text-decoration: none;
+  color: color(neutral, veryDarkGray);
+  font-family: "Space Grotesk", sans-serif;
 }
 
-body {
-  font-family: "Space Grotesk", sans-serif;
-  color: color(neutral, veryDarkGray);
-}
 
 .container { 
   margin: 0 auto;
@@ -46,7 +44,6 @@ body {
           }
           &.has-children {
             >a {
-              color: red;
               &::after {
                 content: url('data:image/svg+xml,<svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 8L2 14" stroke="%23333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
                 margin-left: 13px;
