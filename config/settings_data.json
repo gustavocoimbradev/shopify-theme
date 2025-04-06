@@ -3,7 +3,7 @@
     "presets": {
       "Default": {
         "sections": {
-          "main": {
+          "hero": {
             "type": "hero",
             "settings": {}
           }
