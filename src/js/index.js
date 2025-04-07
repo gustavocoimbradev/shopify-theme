@@ -30,6 +30,7 @@ $(function(){
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
+                    arrows: false,
                 }
             }
         ]
