@@ -19,7 +19,7 @@ $colors: (
     white: #fff
   ) 
 ); 
-
+ 
 // Functions
 @function color($name, $shade) {
     @if map-has-key($colors, $name) and map-has-key(map-get($colors, $name), $shade) {

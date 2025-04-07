@@ -5,17 +5,30 @@ const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const plumber = require("gulp-plumber");
 const del = require("del");
+const fs = require("fs");
 const path = require("path");
 
 const paths = {
   src: "src/**/*",
   scss: "src/**/*.scss",
   js: "src/**/*.js",
+  temp: "temp/",
   assets: "assets/"
 };
 
 function clean() {
-  return del([paths.assets + "*"]);
+  return del([paths.assets + "*", paths.temp + "*"]);
+}
+
+function moveFiles(ext) {
+  const files = fs.readdirSync(paths.temp);
+  files.forEach(file => {
+    if (file.endsWith(ext)) {
+      const from = path.join(paths.temp, file);
+      const to = path.join(paths.assets, file);
+      fs.renameSync(from, to);
+    }
+  });
 }
 
 function compileSCSS() {
@@ -28,7 +41,8 @@ function compileSCSS() {
       file.basename += ".min";
       file.extname = ".css";
     }))
-    .pipe(gulp.dest(paths.assets));
+    .pipe(gulp.dest(paths.temp))
+    .on("end", () => moveFiles(".min.css"));
 }
 
 function compileJS() {
@@ -40,7 +54,8 @@ function compileJS() {
       file.basename += ".min";
       file.extname = ".js";
     }))
-    .pipe(gulp.dest(paths.assets));
+    .pipe(gulp.dest(paths.temp))
+    .on("end", () => moveFiles(".min.js"));
 }
 
 function watchFiles() {
