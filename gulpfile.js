@@ -7,7 +7,8 @@ const plumber = require("gulp-plumber");
 const fs = require("fs");
 
 const paths = {
-  scss: "src/scss/*.scss",
+  scss: "src/scss/**/*.scss",
+  scssEntry: "src/scss/index.scss",
   js: "src/js/*.js",
   img: "src/img/**/*",
   liquid: "**/*.liquid",
@@ -15,7 +16,7 @@ const paths = {
 };
 
 gulp.task("scss", function () {
-  return gulp.src(paths.scss)
+  return gulp.src(paths.scssEntry)
     .pipe(plumber())
     .pipe(sass())
     .pipe(cleanCSS())

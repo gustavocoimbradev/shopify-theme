@@ -2,8 +2,13 @@
 
     &__hero {
 
-        
-
+        &__slick {
+            .slick-list {
+                border-radius: 20px;
+                overflow: hidden;
+            }
+        } 
+ 
     }
 
-}
+}        
