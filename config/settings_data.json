@@ -1,14 +1,1 @@
-{
-    "current": "Default",
-    "presets": {
-      "Default": {
-        "sections": {
-          "hero": {
-            "type": "hero",
-            "settings": {}
-          },
-        }
-      }
-    }
-  }
-  
+[]
