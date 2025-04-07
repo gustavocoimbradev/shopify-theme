@@ -46,6 +46,12 @@
             "informatica"
           ]
         }
+      },
+      "single-collection": {
+        "type": "single-collection",
+        "settings": {
+          "collection": "ofertas-do-mes"
+        }
       }
     },
     "content_for_index": []

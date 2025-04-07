@@ -1,6 +1,10 @@
-<a class="snippet-card" href="{{ product.url }}">
+<a class="card" href="{{ product.url }}">
     <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    <h3>{{ product.title }}</h3>
+    <h5>{{ product.title }}</h5>
+    <div class="product-rating">
+        <div class="shopify-product-reviews-badge" data-id="{{ product.id }}"></div>
+      </div>
+      
     <p>{{ product.price | money }}</p>
 </a>
   
