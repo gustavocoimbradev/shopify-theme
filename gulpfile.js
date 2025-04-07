@@ -9,8 +9,8 @@ const fs = require("fs");
 const path = require("path");
 
 const paths = {
-  src: "src/**/*",
-  scss: "src/**/*.scss",
+  scss: "src/scss/**/!(_)*.scss",        // compila só os arquivos principais (sem underline)
+  scssWatch: "src/scss/**/*.scss",       // observa todos, inclusive os _partials
   js: "src/**/*.js",
   temp: "temp/",
   assets: "assets/"
@@ -59,7 +59,8 @@ function compileJS() {
 }
 
 function watchFiles() {
-  gulp.watch(paths.src, gulp.series(compileSCSS, compileJS));
+  gulp.watch(paths.scssWatch, compileSCSS);
+  gulp.watch(paths.js, compileJS);
 }
 
 const build = gulp.series(clean, gulp.parallel(compileSCSS, compileJS));
