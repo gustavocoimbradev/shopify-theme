@@ -1,0 +1,30 @@
+{% if section.settings.collection %}
+    <section class="home__singleCollection">
+      <div class="container">
+        <div class="home__singleCollection__items"> 
+          {% for product in section.settings.collection.products %}
+            {% render 'card', product: product %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  
+  {% schema %}
+  {
+    "name": "Coleção única",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Escolha a coleção"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Coleção única"
+      }
+    ]
+  }
+  {% endschema %}
+  
