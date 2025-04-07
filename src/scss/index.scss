@@ -34,12 +34,25 @@
             display: flex;
             gap: 74px;
             @include mobile {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 32px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-padding-left: 50%;
+                scroll-padding-right: 50%;
+                -webkit-overflow-scrolling: touch;
+                gap: 1rem;
+                padding: 1rem 0;
+                width: 100dvw;
+                left: 50%;
+                transform: translateX(-50%);
+                position: relative;
             }
             &__item {
                 flex: 1;
+                @include mobile {
+                    flex: 0 0 calc(100% / 3);
+                    scroll-snap-align: center;
+                    scroll-snap-stop: always;
+                }
                 figure {
                     display: flex; 
                     flex-direction: column;
