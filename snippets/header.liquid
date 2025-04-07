@@ -1,15 +1,29 @@
 <header class="header">
     <div class="container">
         <div class="header__top">
-            {% if settings.logo %}
-                <a href="{{ routes.root_url }}">
-                    <img
-                    src="{{ settings.logo | image_url }}"
-                    alt="Logo da loja" 
-                    width="200"
-                    >
+            <div class="header__top__left">
+                {% if settings.logo %}
+                    <a href="{{ routes.root_url }}">
+                        <img
+                        src="{{ settings.logo | image_url }}"
+                        alt="Logo da loja" 
+                        width="305"
+                        >
+                    </a>
+                {% endif %}
+            </div>
+            <div class="header__top__right">
+                <a href="javascript:void(0)" class="js-toggle-search">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 14.0314L20 20.0314M9 16.0314C5.13401 16.0314 2 12.8974 2 9.03143C2 5.16544 5.13401 2.03143 9 2.03143C12.866 2.03143 16 5.16544 16 9.03143C16 12.8974 12.866 16.0314 9 16.0314Z" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
-            {% endif %}
+                <a href="{{ routes.cart_url }}">
+                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2.03143H2.2573C2.71158 2.03143 2.93912 2.03143 3.1244 2.11691C3.28776 2.19227 3.42743 2.31361 3.52815 2.46747C3.6422 2.64169 3.68338 2.87433 3.76558 3.33871L5.83539 15.0315L15.8282 15.0314C16.2627 15.0314 16.4807 15.0314 16.6607 14.9514C16.8197 14.8806 16.9568 14.766 17.0586 14.6204C17.1738 14.4556 17.2226 14.2351 17.3201 13.7945L17.3208 13.7914L18.8255 6.99139L18.8258 6.98997C18.9737 6.32159 19.0478 5.98659 18.9664 5.72382C18.895 5.49325 18.7447 5.29778 18.5453 5.17335C18.318 5.03143 17.9894 5.03143 17.3306 5.03143H4.3971M16.3826 20.0314C15.853 20.0314 15.4238 19.5837 15.4238 19.0314C15.4238 18.4791 15.853 18.0314 16.3826 18.0314C16.9121 18.0314 17.3414 18.4791 17.3414 19.0314C17.3414 19.5837 16.9121 20.0314 16.3826 20.0314ZM6.7942 20.0314C6.26464 20.0314 5.83536 19.5837 5.83536 19.0314C5.83536 18.4791 6.26464 18.0314 6.7942 18.0314C7.32375 18.0314 7.75304 18.4791 7.75304 19.0314C7.75304 19.5837 7.32375 20.0314 6.7942 20.0314Z" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="header__bottom">
             <nav>

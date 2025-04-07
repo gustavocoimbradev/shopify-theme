@@ -10,7 +10,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  color: color(neutral, veryDarkGray);
+  color: color(neutral, darkGray);
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -26,9 +26,9 @@ body {
     padding: 0 16px;
   }
 } 
-
-.header {
-  padding: 32px 0;
+ 
+.header { 
+  padding: 32px 0;  
   >.container {
     display: flex;
     flex-direction: column;
@@ -37,6 +37,15 @@ body {
   &__top {
     display: flex;
     justify-content: space-between;
+    &__left {
+      img {
+        width: 200px;
+      }
+    }
+    &__right {
+      display: flex;
+      gap: 16px;
+    } 
   }
   &__bottom {
     nav {
@@ -79,7 +88,7 @@ body {
               top: calc(100% + 40px);
               opacity: 0;
               width: 100%;
-              border-radius: 10px;
+              border-radius: 8px;
               background: #FFF; 
               pointer-events: none;
               transition: all .3s;
@@ -96,22 +105,12 @@ body {
                   display: block;
                   padding: 6px 8px; 
                   position: relative;
-                  &::before {
-                    content: '';
-                    width: 0px;
-                    height: 1px;
-                    background: color(primary, 100);
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    transition: all .3s;
-                  }
+                  transition: all .3s; 
+                  border-radius: 4px;
                 }
-                &:hover {
+                &:hover { 
                   >a {
-                    &::before {
-                      width: 100%;
-                    }
+                    background: color(neutral, lightGray);
                   }
                 }
               }
