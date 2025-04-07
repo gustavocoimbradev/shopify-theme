@@ -18,14 +18,14 @@
               "type": "imagem",
               "settings": {
                 "imagem": "shopify://shop_images/Banner02_1.png",
-                "link": ""
+                "link": "shopify://products/blue-silk-tuxedo"
               }
             },
             "imagem_rkV9Ki": {
               "type": "imagem",
               "settings": {
                 "imagem": "shopify://shop_images/BANNER1_1.png",
-                "link": ""
+                "link": "shopify://collections/exemplo-de-colecao"
               }
             }
           },
