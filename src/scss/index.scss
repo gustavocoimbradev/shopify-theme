@@ -3,9 +3,16 @@
     &__hero {
 
         &__slick {
-            .slick-list {
+            &, .slick-list {
                 border-radius: 20px;
                 overflow: hidden;
+            }
+            &:not(.slick-initialized) {
+                >* {
+                    &:not(:first-of-type) {
+                        display: none;
+                    }
+                }
             }
         }  
  

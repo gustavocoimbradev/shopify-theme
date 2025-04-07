@@ -1,1 +1,1 @@
-.home__hero__slick .slick-list{border-radius:20px;overflow:hidden}
+.home__hero__slick,.home__hero__slick .slick-list{border-radius:20px;overflow:hidden}.home__hero__slick:not(.slick-initialized)>:not(:first-of-type){display:none}
