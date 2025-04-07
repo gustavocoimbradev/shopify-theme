@@ -1,8 +1,16 @@
-
-<section class="home__collections">
-    <div class="container">
-    </div>
-</section>
+{% if section.settings.collections != blank %}
+    <section class="home__collections">
+        <div class="container">
+            <div class="home__collections__slick js-collections">
+                {% for collection in section.settings.collections %}
+                    <a href="{{ collection.url }}">
+                        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}
 
 {% schema %}
 {
