@@ -1,9 +1,7 @@
 {% if section.settings.collection %}
     <section class="home__singleCollection">
       <div class="container">
-        {% if section.settings.title != blank %}
-          <h1 class="home__singleCollection__title">{{ section.settings.title }}</h1>
-        {% endif %}
+        <h1 class="home__singleCollection__title">{{ section.settings.collection.title }}</h1>
         <div class="home__singleCollection__items"> 
           {% for product in section.settings.collection.products %}
             {% render 'card', product: product %}
@@ -17,11 +15,6 @@
   {
     "name": "Coleção única",
     "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Título da seção",
-      },
       {
         "type": "collection",
         "id": "collection",
