@@ -124,6 +124,9 @@ h5 {
                 pointer-events: none;
                 transition: all .3s;
                 padding: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
                 &::before {
                   content: ''; 
                   top: -15px; 
