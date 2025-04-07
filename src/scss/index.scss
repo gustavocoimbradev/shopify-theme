@@ -98,6 +98,10 @@
         &__items {
             width: calc(100% + 52px);
             margin-left: -22px;
+            @include desktop {
+                width: 100%;
+                margin-left: unset;
+            }
             &.slick-slider {
                 position: relative;
                 .slick-arrow {
