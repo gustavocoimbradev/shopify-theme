@@ -89,6 +89,24 @@ body {
                 >a {
                   display: block;
                   padding: 6px 8px; 
+                  position: relative;
+                  &::before {
+                    content: '';
+                    width: 0px;
+                    height: 1px;
+                    background: color(primary, 100);
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transition: all .3s;
+                  }
+                }
+                &:hover {
+                  >a {
+                    &::before {
+                      width: 100%;
+                    }
+                  }
                 }
               }
             }  
