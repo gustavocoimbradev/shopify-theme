@@ -2,20 +2,19 @@
     "name": "telecenter-eletronica",
     "version": "1.0.0",
     "scripts": {
-        "dev": "concurrently \"gulp\" \"shopify theme dev --store=telecenter-eletronica\"",
-        "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force --ignore \"config/settings_data.json\"",
-        "preview": "shopify theme push --unpublished --theme 178691834150 --force",
-        "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
-        "publish": "npm run git && npm run prod"
+        "dev": "NODE_NO_WARNINGS=1 concurrently \"gulp\" \"shopify theme dev --store=telecenter-eletronica\"",
+        "publish": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push && shopify theme push --theme \"telecenter-eletronica\" --allow-live --force --ignore \"config/settings_data.json\""
     },
     "devDependencies": {
+        "chokidar-cli": "^3.0.0",
         "concurrently": "^9.1.2",
+        "del": "^6.1.1",
         "gulp": "^5.0.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-plumber": "^1.2.1",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^6.0.1",
         "gulp-terser": "^2.1.0",
-        "sass": "^1.86.0"
+        "sass": "^1.86.3"
     }
 }

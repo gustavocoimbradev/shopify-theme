@@ -4,48 +4,53 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const plumber = require("gulp-plumber");
-const fs = require("fs");
+const del = require("del");
+const path = require("path");
 
 const paths = {
-  scss: "src/scss/**/*.scss",
-  scssEntry: "src/scss/index.scss",
-  js: "src/js/*.js",
-  img: "src/img/**/*",
-  liquid: "**/*.liquid",
+  src: "src/**/*",
+  scss: "src/**/*.scss",
+  js: "src/**/*.js",
   assets: "assets/"
 };
 
-gulp.task("scss", function () {
-  return gulp.src(paths.scssEntry)
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(cleanCSS())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(paths.assets));
-});
+function clean() {
+  return del([paths.assets + "*"]);
+}
 
-gulp.task("js", function () {
+function compileSCSS() {
+  return gulp.src(paths.scss)
+    .pipe(plumber())
+    .pipe(sass({ quietDeps: true }))
+    .pipe(cleanCSS())
+    .pipe(rename(file => {
+      file.dirname = "";
+      file.basename += ".min";
+      file.extname = ".css";
+    }))
+    .pipe(gulp.dest(paths.assets));
+}
+
+function compileJS() {
   return gulp.src(paths.js)
     .pipe(plumber())
-    .pipe(rename({ suffix: ".min" }))
     .pipe(terser())
+    .pipe(rename(file => {
+      file.dirname = "";
+      file.basename += ".min";
+      file.extname = ".js";
+    }))
     .pipe(gulp.dest(paths.assets));
-});
+}
 
-gulp.task("img", function () {
-  return gulp.src(paths.img)
-    .pipe(gulp.dest(paths.assets));
-});
+function watchFiles() {
+  gulp.watch(paths.src, gulp.series(compileSCSS, compileJS));
+}
 
-gulp.task("liquid", function (done) {
-  gulp.series("scss")(done);
-});
+const build = gulp.series(clean, gulp.parallel(compileSCSS, compileJS));
+const watch = gulp.series(build, watchFiles);
 
-gulp.task("watch", function () {
-  gulp.watch(paths.scss, gulp.series("scss"));
-  gulp.watch(paths.js, gulp.series("js"));
-  gulp.watch(paths.img, gulp.series("img"));
-  gulp.watch(paths.liquid, gulp.series("liquid"));
-});
-
-gulp.task("default", gulp.parallel("scss", "js", "img", "watch"));
+exports.clean = clean;
+exports.build = build;
+exports.watch = watchFiles;
+exports.default = watch;

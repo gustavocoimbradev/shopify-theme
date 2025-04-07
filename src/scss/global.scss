@@ -16,21 +16,21 @@
 
 body {
   background-color: color(neutral, lightGray);
-}
+}  
 
 .container { 
-  margin: 0 auto; 
+  margin: 0 auto;  
   max-width: 1280px; 
-  width: 100%;
+  width: 100%; 
   @include mobile {
-    padding: 0 16px;
+    padding: 0 16px; 
   }  
 }  
-   
+      
 .header {   
-  padding: 32px 0;  
-  z-index: 10;
-  position: relative;
+  position: relative;    
+  padding: 32px 0;     
+  z-index: 10;  
   >.container {
     display: flex; 
     flex-direction: column;
