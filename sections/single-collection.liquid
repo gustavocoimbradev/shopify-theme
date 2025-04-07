@@ -1,6 +1,9 @@
 {% if section.settings.collection %}
     <section class="home__singleCollection">
       <div class="container">
+        {% if section.settings.title != blank %}
+          <h1 class="home__singleCollection__title">{{ section.settings.title }}</h1>
+        {% endif %}
         <div class="home__singleCollection__items"> 
           {% for product in section.settings.collection.products %}
             {% render 'card', product: product %}
@@ -8,12 +11,18 @@
         </div>
       </div>
     </section>
-  {% endif %}
+{% endif %}
   
-  {% schema %}
+{% schema %}
   {
     "name": "Coleção única",
     "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Título da seção",
+        "default": "Ofertas do Mês"
+      },
       {
         "type": "collection",
         "id": "collection",
@@ -26,5 +35,5 @@
       }
     ]
   }
-  {% endschema %}
+{% endschema %}
   
