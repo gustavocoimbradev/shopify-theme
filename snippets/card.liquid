@@ -1,13 +1,7 @@
 <a class="card" href="{{ product.url }}">
     <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
     <h5>{{ product.title }}</h5>
-    <div class="jdgm-preview-badge" data-id="{{ product.id }}"></div>
-    <!-- Start of Judge.me code --> 
-    <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'> 
-    {{ product.metafields.judgeme.badge }} 
-    </div> 
-    <!-- End of Judge.me code -->
-
+    {% render 'stars', product: product %}
     <p>{{ product.price | money }}</p>
 </a>
   
