@@ -1,8 +1,8 @@
 {% if section.settings.collection %}
     <section class="home__singleCollection">
-      <div class="container">
+      <div class="container"> 
         <h1 class="home__singleCollection__title">{{ section.settings.collection.title }}</h1>
-        <div class="home__singleCollection__items"> 
+        <div class="home__singleCollection__items js-single-collection"> 
           {% for product in section.settings.collection.products %}
             {% render 'card', product: product %}
           {% endfor %}

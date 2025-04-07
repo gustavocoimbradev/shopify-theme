@@ -95,6 +95,24 @@
             text-align: center;
             margin: 0 0 24px;
         }
+        &__items {
+            display: flex;
+
+            &.slick-slider {
+                position: relative;
+                .slick-arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    &.slick-prev {
+                        left: -30px;
+                    }
+                    &.slick-next {
+                        right: -30px;
+                    }
+                }
+            }
+        }
     }
 
 }        
