@@ -2,6 +2,7 @@
 <html>
     <head>
         {{ content_for_header }}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
         {% if template.name and template.name != blank %}

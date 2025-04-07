@@ -7,6 +7,10 @@
                 border-radius: 20px;
                 overflow: hidden;
                 display: flex;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
             &:not(.slick-initialized) {
                 >a:not(:first-of-type) {
