@@ -45,6 +45,14 @@
                 left: 50%;
                 transform: translateX(-50%);
                 position: relative;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; 
+                -ms-overflow-style: none; 
+                &::-webkit-scrollbar {
+                    display: none;
+                    width: 0 !important;
+                    height: 0 !important;
+                }
             }
             &__item {
                 flex: 1;
