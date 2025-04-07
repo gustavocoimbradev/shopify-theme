@@ -3,7 +3,8 @@
         <div class="container">
             <div class="home__collections__items"> 
                 {% for collection in section.settings.collections %}
-                    <a class="home__collections__items__item" href="{{ collection.url }}">
+                    {% assign delay = forloop.index0 | times: 300 %}
+                    <a class="home__collections__items__item" href="{{ collection.url }}" data-aos="fade-up" data-aos-delay="{{ delay }}">
                         <figure>
                             <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
                             <figcaption>{{ collection.title }}</figcaption>
