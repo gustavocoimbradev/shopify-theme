@@ -3,15 +3,14 @@
     &__hero {
 
         &__slick {
-            &, .slick-list {
+            &__item {
                 border-radius: 20px;
                 overflow: hidden;
+                display: flex;
             }
             &:not(.slick-initialized) {
-                >* {
-                    &:not(:first-of-type) {
-                        display: none;
-                    }
+                >a:not(:first-of-type) {
+                    display: none;
                 }
             }
         }  
