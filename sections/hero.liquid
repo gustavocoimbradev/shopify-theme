@@ -1,21 +1,21 @@
 
-<section>
-    <div class="container">
-      <div>
-        {% for block in section.blocks %}
-          <figure>
-            {% if block.settings.link != blank %}
-              <a href="{{ block.settings.link }}">
-            {% endif %}
-                <img src="{{ block.settings.imagem | img_url: 'master' }}" alt="" width="" height="">
-            {% if block.settings.link != blank %}
-              </a>
-            {% endif %}
-          </figure>
-        {% endfor %}
-      </div>
+<section class="home__hero">
+  <div class="container">
+    <div class="home__hero__slick js-hero">
+      {% for block in section.blocks %}
+        <figure>
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link }}">
+          {% endif %}
+              <img src="{{ block.settings.imagem | img_url: 'master' }}" alt="" width="" height="">
+          {% if block.settings.link != blank %}
+            </a>
+          {% endif %}
+        </figure>
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
   
 {% schema %}
   {

@@ -13,6 +13,26 @@
       "sections": {
         "hero": {
           "type": "hero",
+          "blocks": {
+            "imagem_L9bCpF": {
+              "type": "imagem",
+              "settings": {
+                "imagem": "shopify://shop_images/Banner02_1.png",
+                "link": ""
+              }
+            },
+            "imagem_rkV9Ki": {
+              "type": "imagem",
+              "settings": {
+                "imagem": "shopify://shop_images/BANNER1_1.png",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "imagem_L9bCpF",
+            "imagem_rkV9Ki"
+          ],
           "settings": {}
         }
       },

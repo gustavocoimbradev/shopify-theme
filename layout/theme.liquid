@@ -2,6 +2,7 @@
 <html>
     <head>
         {{ content_for_header }}
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
         {% if template.name and template.name != blank %}
             <link rel="stylesheet" href="{{ template.name | append: '.min.css' | asset_url }}">
@@ -11,6 +12,11 @@
         {% render 'header' %}
         {{ content_for_layout }}
         {% render 'footer' %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
         <script src="{{ 'script.min.js' | asset_url }}" defer></script>
+        {% if template.name and template.name != blank %}
+            <script src="{{ template.name | append: '.min.js' | asset_url }}" defer></script>
+        {% endif %}
     </body>
 </html>
