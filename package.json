@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "dev": "concurrently \"gulp\" \"shopify theme dev --store=telecenter-eletronica\"",
-        "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force",
+        "prod": "shopify theme push --theme \"telecenter-eletronica\" --allow-live --force --ignore \"config/settings_data.json\"",
         "preview": "shopify theme push --unpublished --theme 178691834150 --force",
         "git": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push",
         "publish": "npm run git && npm run prod"
