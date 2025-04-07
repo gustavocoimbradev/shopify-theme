@@ -41,6 +41,9 @@
                 -webkit-overflow-scrolling: touch;
                 gap: 1rem;
                 padding: 0 16px;
+                width: 100dvw;
+                left: 50%;
+                transform: translateX(-50%);
                 position: relative;
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none; 
@@ -55,8 +58,8 @@
                 flex: 1;
                 @include mobile {
                     flex: 0 0 calc(100% / 3);
-                    scroll-snap-align: center;
-                    scroll-snap-stop: always;
+                    //scroll-snap-align: center;
+                    //scroll-snap-stop: always;
                 }
                 figure {
                     display: flex; 
