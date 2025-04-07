@@ -99,7 +99,10 @@
             width: calc(100% + 52px);
             margin-left: -22px;
             @include mobile {
-                width: 100%;
+                width: 100dvw;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
                 margin-left: unset;
             }
             &.slick-slider {
