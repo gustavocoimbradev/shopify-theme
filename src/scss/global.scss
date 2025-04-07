@@ -92,6 +92,7 @@ h5 {
               align-items: center;
               gap: 13px;
               position: relative;
+              white-space: nowrap;
               &::before {
                 content: '';
                 width: 0px;
@@ -116,7 +117,8 @@ h5 {
                 position: absolute;
                 top: calc(100% + 40px);
                 opacity: 0;
-                width: 100%;
+                min-width: 100%;
+                width: max-content;
                 border-radius: 8px;
                 background: #FFF; 
                 pointer-events: none;
@@ -136,6 +138,7 @@ h5 {
                     position: relative;
                     transition: all .3s; 
                     border-radius: 4px;
+                    white-space: nowrap;
                   }
                   &:hover { 
                     >a {
