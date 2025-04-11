@@ -13,11 +13,15 @@ $colors: (
   ),
   neutral: (
     lightGray: #F5F5F5, 
-    gray: #DEDEDE,
+    gray: #DEDEDE, 
     darkGray: #333,
     black: #000,
     white: #fff
-  ) 
+  ),
+  gradient: (
+    primary: linear-gradient(270deg, #272D8F 0%, #4B52CE 100%)
+    primaryReverse: linear-gradient(270deg, #4B52CE 0%, #272D8F 100%)
+  )
 ); 
  
 // Functions

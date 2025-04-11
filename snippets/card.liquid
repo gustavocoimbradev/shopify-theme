@@ -1,9 +1,14 @@
-<a class="c-card" href="{{ product.url }}">
-    <figure>
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    </figure>
-    <h5>{{ product.title }}</h5>
+<article class="c-card">
+    <a href="{{ product.url }}">
+        <figure>
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        </figure>
+        <h5>{{ product.title }}</h5>
+    </a>
     {% render 'stars', product: product %}
     <p>{{ product.price | money }}</p>
-</a>
+    <a href="/cart/add?id={{ product.variants.first.id }}" class="c-button c-button--gradient-primary c-button--small">
+        <span>Adicionar ao carrinho</span>
+    </a>
+</article>
   
