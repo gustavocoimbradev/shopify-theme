@@ -182,7 +182,7 @@ h5 {
   }
 }
 
-.card {
+.c-card {
   padding: 10px 22.5px;
   display: flex;
   flex-direction: column;
@@ -209,16 +209,17 @@ h5 {
     line-height: normal;
     margin: 0 0 10px; 
   }
-  .c-stars {
-    margin: 0 0 10px;
-    .star {
-      width: 18px;
-      display: inline-block;
-      font-size: initial;
-      &.active {
-        path {
-          fill: color(secondary, 100);
-        }
+}
+
+.c-stars {
+  margin: 0 0 10px;
+  .star {
+    width: 18px;
+    display: inline-block;
+    font-size: initial;
+    &.active {
+      path {
+        fill: color(secondary, 100);
       }
     }
   }
