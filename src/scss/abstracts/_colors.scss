@@ -1,0 +1,23 @@
+$colors: (
+  primary: (
+    100: #00429D,
+    200: #272D8F,
+    300: #15184C
+  ),
+  secondary: (
+    100: #F1CD32,
+  ),
+  tertiary: (
+    100: #D93332, 
+  ),
+  neutral: (
+    lightGray: #F5F5F5, 
+    gray: #DEDEDE, 
+    darkGray: #333,
+    black: #000,
+    white: #fff
+  ),
+  gradient: (
+    primary: linear-gradient(270deg, #4B52CE 0%, #272D8F 50%, #4B52CE 100%)
+  )
+);

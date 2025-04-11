@@ -1,14 +1,14 @@
 {% if section.settings.collection %}
-    <section class="home__singleCollection">
-      <div class="container"> 
-        <h1 class="home__singleCollection__title">{{ section.settings.collection.title }}</h1>
-        <div class="home__singleCollection__items js-single-collection"> 
-          {% for product in section.settings.collection.products %}
-            {% render 'card', product: product %}
-          {% endfor %}
-        </div>
+  <section class="l-single-collection">
+    <div class="u-container"> 
+      <h1 class="l-single-collection__title">{{ section.settings.collection.title }}</h1>
+      <div class="l-single-collection__items js-single-collection"> 
+        {% for product in section.settings.collection.products %}
+          {% render 'card', product: product %}
+        {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
 {% endif %}
   
 {% schema %}

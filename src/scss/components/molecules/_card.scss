@@ -1,0 +1,56 @@
+.c-card {
+    padding: 10px 22.5px;
+    &, >a:first-of-type {
+        display: flex !important;
+        flex-direction: column;
+        gap: 8px; 
+    } 
+    &, * {
+        transition: all .3s ease-in-out;
+    }
+    @include mobile {
+        padding: 10px 16px;
+    }
+    figure { 
+        height: 241px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 0;
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        @include mobile {
+            height: 161px;
+        }
+        }
+    }
+    h5 {
+        color: get-color(neutral, darkGray);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0; 
+    }
+    p {
+        color: get-color(primary, 200);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+    >a:last-of-type {
+        margin: 8px 0 0;  
+    }
+    &:hover {
+        figure {
+        img {
+            scale: 1.1;
+        }
+        }
+    }
+}

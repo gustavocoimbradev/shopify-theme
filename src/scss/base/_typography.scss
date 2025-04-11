@@ -1,0 +1,18 @@
+h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.555%; 
+    letter-spacing: -1.44px;
+    background: linear-gradient(90deg, get-color(primary, 200) 0%, get-color(primary, 300) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h5 { 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

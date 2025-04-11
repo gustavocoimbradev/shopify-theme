@@ -1,0 +1,129 @@
+.l-header {   
+    position: relative;    
+    padding: 32px 0;     
+    z-index: 10;  
+    >.container {
+        display: flex; 
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__left {
+        img {
+            width: 200px;
+        }
+        }
+        &__right {
+        display: flex;
+        gap: 16px;
+        } 
+    }
+    &__bottom {
+        @include desktop {
+        nav {
+            >ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            >li {
+                >a {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                display: flex;
+                align-items: center;
+                gap: 13px;
+                position: relative;
+                white-space: nowrap;
+                &::before {
+                    content: '';
+                    width: 0px;
+                    height: 1px;
+                    background: get-color(primary, 100);
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transition: all .3s;
+                }
+                }
+                &.has-children {
+                position: relative;
+                >a { 
+                    &::after {
+                    content: url('data:image/svg+xml,<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                    transition: all .3s;
+                    display: inline-block;
+                    }
+                }
+                >ul {
+                    position: absolute;
+                    top: calc(100% + 40px);
+                    opacity: 0;
+                    min-width: 100%;
+                    width: max-content;
+                    border-radius: 8px;
+                    background: #FFF; 
+                    pointer-events: none;
+                    transition: all .3s;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    &::before {
+                    content: ''; 
+                    top: -15px; 
+                    height: 15px;
+                    width: 100%;
+                    position: absolute;
+                    }
+                    >li {
+                    >a {
+                        display: block;
+                        padding: 6px 8px; 
+                        position: relative;
+                        transition: all .3s; 
+                        border-radius: 4px;
+                        white-space: nowrap;
+                    }
+                    &:hover { 
+                        >a {
+                        background: get-color(neutral, lightGray);
+                        }
+                    }
+                    }
+                }  
+                &:hover {
+                    >a {
+                    &::after {
+                        content: url('data:image/svg+xml,<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="%23272D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                        transform: rotate(90deg); 
+                    }
+                    }
+                }
+                }
+                &:hover {
+                >a {
+                    color: get-color(primary, 100);
+                    &::before {
+                    width: 100%;
+                    }
+                }
+                >ul {
+                    opacity: 1; 
+                    top: calc(100% + 15px);
+                    pointer-events: unset;
+                }
+                } 
+            }
+            }
+        } 
+        }
+        @include mobile {
+        display: none;
+        }
+    }
+}

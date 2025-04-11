@@ -1,0 +1,7 @@
+@function get-color($name, $shade) {
+  @if map-has-key($colors, $name) and map-has-key(map-get($colors, $name), $shade) {
+    @return map-get(map-get($colors, $name), $shade);
+  }
+  @warn "Cor `#{$name}-#{$shade}` não encontrada!";
+  @return null;
+}

@@ -1,7 +1,7 @@
-<header class="header">
-    <div class="container">
-        <div class="header__top">
-            <div class="header__top__left">
+<header class="l-header">
+    <div class="u-container">
+        <div class="l-header__top">
+            <div class="l-header__top__left">
                 {% if settings.logo %}
                     <a href="{{ routes.root_url }}">
                         <img
@@ -12,7 +12,7 @@
                     </a>
                 {% endif %}
             </div>
-            <div class="header__top__right">
+            <div class="l-header__top__right">
                 <a href="javascript:void(0)" class="js-toggle-search">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 14.0314L20 20.0314M9 16.0314C5.13401 16.0314 2 12.8974 2 9.03143C2 5.16544 5.13401 2.03143 9 2.03143C12.866 2.03143 16 5.16544 16 9.03143C16 12.8974 12.866 16.0314 9 16.0314Z" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -25,7 +25,7 @@
                 </a>
             </div>
         </div>
-        <div class="header__bottom">
+        <div class="l-header__bottom">
             <nav>
                 <ul>
                     {% for link in linklists.main-menu.links %}

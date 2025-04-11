@@ -1,0 +1,13 @@
+.c-stars {
+    margin: 0;
+    .star {
+        width: 18px;
+        display: inline-block;
+        font-size: initial;
+        &.active {
+        path {
+            fill: get-color(secondary, 100);
+        }
+        }
+    }
+}

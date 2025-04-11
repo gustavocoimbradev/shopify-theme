@@ -1,0 +1,11 @@
+body {
+    color: get-color(neutral, darkGray);
+    background: get-color(neutral, lightGray);
+    overflow-x: hidden;
+    font-family: "Space Grotesk", sans-serif; 
+}   
+
+figure {
+    display: flex;
+}
+  

@@ -1,0 +1,47 @@
+.c-button {
+    border-radius: 100px;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    span {
+        color: get-color(neutral, white);
+    }
+    &::before {
+        content: '';
+        width: 200%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: -1;
+    }
+    &, *, &::before, &::after {
+        transition: all .6s ease-in-out;
+    }
+    // Colors
+    &--gradient-primary {
+        &::before {
+        background: get-color(gradient, primary);
+        }
+        &:hover {
+        &::before { 
+            left: 0;
+        }
+        }
+    }
+    // Sizes
+    &--small {
+        height: 36px;
+        span {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        }
+    }
+}

@@ -1,9 +1,9 @@
 {% if section.blocks != blank %}
-  <section class="home__hero" data-aos="fade-in" data-aos-delay="500">
-    <div class="container">
-      <div class="home__hero__slick js-hero">
+  <section class="l-hero" data-aos="fade-in" data-aos-delay="500">
+    <div class="u-container">
+      <div class="l-hero__slick js-hero">
         {% for block in section.blocks %}
-            <a class="home__hero__slick__item" href="{% if block.settings.link != blank %} {{ block.settings.link }}{% else %}javascript:void(0){% endif %}">
+            <a class="l-hero__slick__item" href="{% if block.settings.link != blank %} {{ block.settings.link }}{% else %}javascript:void(0){% endif %}">
               <figure>
                 <img src="{{ block.settings.imagem | img_url: 'master' }}" alt="" width="" height="">
               </figure>
