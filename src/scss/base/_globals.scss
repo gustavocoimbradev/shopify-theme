@@ -5,6 +5,10 @@ body {
     font-family: "Space Grotesk", sans-serif; 
 }   
 
+&, *::before, *::after {
+    color: get-color(neutral, darkGray);
+}
+
 figure {
     display: flex;
 }
