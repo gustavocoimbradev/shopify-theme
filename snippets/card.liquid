@@ -1,5 +1,7 @@
 <a class="c-card" href="{{ product.url }}">
-    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+    <figure>
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+    </figure>
     <h5>{{ product.title }}</h5>
     {% render 'stars', product: product %}
     <p>{{ product.price | money }}</p>
