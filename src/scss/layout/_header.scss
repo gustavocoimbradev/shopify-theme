@@ -39,7 +39,7 @@
                 gap: 13px;
                 position: relative;
                 white-space: nowrap;
-                color: blue;
+                color: get-color(neutral, darkGray);
                 &::before {
                     content: '';
                     width: 0px;
