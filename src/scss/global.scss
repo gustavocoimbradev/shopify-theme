@@ -265,15 +265,32 @@ h5 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all .3s;
+  position: relative;
+  overflow: hidden;
   span {
     color: color(neutral, white);
   }
+  &::before {
+    content: '';
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+  }
+  &, *, &::before, &::after {
+    transition: all .6s ease-in-out;
+  }
   // Colors
   &--gradient-primary {
-    background: color(gradient, primary);
+    &::before {
+      background: color(gradient, primary);
+    }
     &:hover {
-      background: color(gradient, primaryReverse);
+      &::before { 
+        left: 0;
+      }
     }
   }
   // Sizes

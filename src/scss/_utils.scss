@@ -19,8 +19,7 @@ $colors: (
     white: #fff
   ),
   gradient: (
-    primary: linear-gradient(270deg, #272D8F 0%, #4B52CE 100%)
-    primaryReverse: linear-gradient(270deg, #4B52CE 0%, #272D8F 100%)
+    primary: linear-gradient(270deg, #4B52CE 0%, #272D8F 50%, #4B52CE 100%)
   )
 ); 
  
