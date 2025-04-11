@@ -16,18 +16,7 @@ const paths = {
   assets: "assets/"
 };
 
-function muteWarnings() {
-  const originalWrite = process.stderr.write;
-  process.stderr.write = function (str, encoding, fd) {
-    if (
-      str.includes("Deprecation Warning") ||
-      str.includes("deprecation warning")
-    ) {
-      return;
-    }
-    return originalWrite.apply(process.stderr, arguments);
-  };
-}
+
 
 function clean() {
   return del([paths.assets + "*", paths.temp + "*"]);
@@ -45,7 +34,6 @@ function moveFiles(ext) {
 }
 
 function compileSCSS() {
-  muteWarnings();
   return gulp.src(paths.scss)
     .pipe(plumber())
     .pipe(sass({ quietDeps: true }))
