@@ -113,7 +113,7 @@
           "item_cCH9Gp": {
             "type": "item",
             "settings": {
-              "icone": "shopify://shop_images/distribuidor.png",
+              "icon": "shopify://shop_images/distribuidor.png",
               "title": "Distribuidor Oficial",
               "text": "Peças e acessórios LG",
               "link": "https://www.lg.com/br/suporte/sac/lg-distribuidores/?srsltid=AfmBOoq_xocEMf6RslCQleRGmwuRjWMH05NkcitDKEa250fZ_g8_kXPh"
@@ -122,7 +122,7 @@
           "item_akWqDP": {
             "type": "item",
             "settings": {
-              "icone": "shopify://shop_images/cliente.png",
+              "icon": "shopify://shop_images/cliente.png",
               "title": "Compra Segura",
               "text": "+10.000 clientes atendidos",
               "link": "#"
@@ -131,7 +131,7 @@
           "item_hmUYXn": {
             "type": "item",
             "settings": {
-              "icone": "shopify://shop_images/suporte.png",
+              "icon": "shopify://shop_images/suporte.png",
               "title": "Suporte ao cliente",
               "text": "De segunda a sexta das 8h às 17h",
               "link": "#"
@@ -140,7 +140,7 @@
           "item_n7VyM7": {
             "type": "item",
             "settings": {
-              "icone": "shopify://shop_images/envio.png",
+              "icon": "shopify://shop_images/envio.png",
               "title": "Envio em 24h",
               "text": "Para compras via Pix",
               "link": "#"
