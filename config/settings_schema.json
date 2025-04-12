@@ -47,6 +47,21 @@
         "id": "address",
         "label": "Endereço",
         "default": "Av. Major Venâncio, n°315, Centro 37002-500"
+      },
+      {
+        "type": "image_picker",
+        "id": "payment_methods",
+        "label": "Formas de pagamento",
+      },
+      {
+        "type": "image_picker",
+        "id": "carriers",
+        "label": "Transportadoras",
+      },
+      {
+        "type": "image_picker",
+        "id": "security_seals",
+        "label": "Selos de segurança",
       }
     ]
   }
