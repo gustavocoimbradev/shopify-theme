@@ -115,7 +115,7 @@
             "settings": {
               "icon": "shopify://shop_images/distribuidor.png",
               "title": "Distribuidor Oficial",
-              "text": "Peças e acessórios originais LG",
+              "text": "Peças e acessórios LG",
               "link": "https://www.lg.com/br/suporte/sac/lg-distribuidores/?srsltid=AfmBOoq_xocEMf6RslCQleRGmwuRjWMH05NkcitDKEa250fZ_g8_kXPh"
             }
           },
@@ -154,6 +154,14 @@
           "item_n7VyM7"
         ],
         "settings": {}
+      },
+      "about": {
+        "type": "about",
+        "settings": {
+          "title": "Sobre Nós",
+          "text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions</p>",
+          "image": "shopify://shop_images/images.jpg"
+        }
       }
     },
     "content_for_index": [],
