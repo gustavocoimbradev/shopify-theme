@@ -6,6 +6,11 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo da loja"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo-white",
+        "label": "Logo da loja (branco)"
       }
     ]
   }
