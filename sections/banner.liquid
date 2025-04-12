@@ -1,0 +1,22 @@
+{% if section.settings.banner != blank %}
+    <section class="c-banner">
+        <div class="u-container">
+            <figure class="c-banner__image"> 
+                <img src="{{ section.settings.banner | img_url: 'medium' }}" alt="">
+            </figure>
+        </div>
+    </section>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "banner",
+            "label": "Escolha uma imagem",
+        }
+    ],
+}
+{% endschema %}
