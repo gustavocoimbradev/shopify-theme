@@ -48,19 +48,6 @@
         "label": "Endereço",
         "default": "Av. Major Venâncio, n°315, Centro 37002-500"
       }
-    ],
-    "blocks": [
-      {
-        "type": "payment",
-        "name": "Forma de pagamento",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "icon",
-            "label": "Ícone"
-          }
-        ]
-      }
     ]
   }
 ]
