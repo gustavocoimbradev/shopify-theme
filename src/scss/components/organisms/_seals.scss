@@ -1,27 +1,37 @@
 .c-seals {
     margin: 90px 0;
+    @include mobile {
+        margin: 20px 0 90px;
+    }
     &__items {
         display: flex;
-        align-items: center;
+        align-items: center; 
         justify-content: center;
         gap: 20px;
+        @include mobile {
+            flex-direction: column; 
+            align-items: flex-start; 
+            gap: 60px;
+        }
         &__item {
             flex: 1;
             figure {
-                height: 40px; 
                 transition: all .3s; 
                 display: flex;
                 align-items: flex-start;
                 gap: 16px;
                 img {
-                    width: 64px;
+                    width: 40px;
                 }
-                figcaption {
+                figcaption { 
                     flex: 1;
+                    h5 {    
+                        color: get-color(primary, 200);
+                    } 
                 }
                 &:hover {
                     scale: 1.1;
-                }
+                } 
             }
         }
     }

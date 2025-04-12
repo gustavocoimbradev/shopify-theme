@@ -1,5 +1,8 @@
 .c-stores {
     margin: 0 0 80px;
+    @include mobile {
+        margin: 50px 0;
+    }
     &__title {
         text-align: center;
         margin: 0 0 24px;
