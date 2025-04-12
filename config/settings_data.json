@@ -58,6 +58,46 @@
         "settings": {
           "banner": "shopify://shop_images/BANNER3_1.png"
         }
+      },
+      "stores": {
+        "type": "stores",
+        "blocks": {
+          "item_yqVW8j": {
+            "type": "item",
+            "settings": {
+              "logo": "shopify://shop_images/Logotipo_MercadoLivre_1.png",
+              "link": "https://telecentereletronica.mercadoshops.com.br/"
+            }
+          },
+          "item_nXfXEn": {
+            "type": "item",
+            "settings": {
+              "logo": "shopify://shop_images/Shopee_1.png",
+              "link": "https://telecentereletronica.mercadoshops.com.br/"
+            }
+          },
+          "item_6rkVhp": {
+            "type": "item",
+            "settings": {
+              "logo": "shopify://shop_images/magalu-logo-0_1.png",
+              "link": "https://telecentereletronica.mercadoshops.com.br/"
+            }
+          },
+          "item_N9qUzA": {
+            "type": "item",
+            "settings": {
+              "logo": "shopify://shop_images/amazon_1.png",
+              "link": "https://telecentereletronica.mercadoshops.com.br/"
+            }
+          }
+        },
+        "block_order": [
+          "item_yqVW8j",
+          "item_nXfXEn",
+          "item_6rkVhp",
+          "item_N9qUzA"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
