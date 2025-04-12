@@ -27,7 +27,7 @@ $(function(){
         </button>`,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 992,
                 settings: {
                     variableWidth: true,
                     arrows: false,
