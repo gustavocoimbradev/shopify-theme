@@ -47,12 +47,6 @@
           ]
         }
       },
-      "single-collection": {
-        "type": "single-collection",
-        "settings": {
-          "collection": "ofertas-do-mes"
-        }
-      },
       "banner": {
         "type": "banner",
         "settings": {
@@ -96,6 +90,68 @@
           "item_nXfXEn",
           "item_6rkVhp",
           "item_N9qUzA"
+        ],
+        "settings": {
+          "title": "Onde Comprar"
+        }
+      },
+      "single-collection": {
+        "type": "single-collection",
+        "settings": {
+          "collection": ""
+        }
+      },
+      "best-selling": {
+        "type": "best-selling",
+        "settings": {
+          "title": "Mais Vendidos"
+        }
+      },
+      "seals": {
+        "type": "seals",
+        "blocks": {
+          "item_cCH9Gp": {
+            "type": "item",
+            "settings": {
+              "icone": "shopify://shop_images/distribuidor.png",
+              "title": "Distribuidor Oficial",
+              "text": "Peças e acessórios LG",
+              "link": "https://www.lg.com/br/suporte/sac/lg-distribuidores/?srsltid=AfmBOoq_xocEMf6RslCQleRGmwuRjWMH05NkcitDKEa250fZ_g8_kXPh"
+            }
+          },
+          "item_akWqDP": {
+            "type": "item",
+            "settings": {
+              "icone": "shopify://shop_images/cliente.png",
+              "title": "Compra Segura",
+              "text": "+10.000 clientes atendidos",
+              "link": "#"
+            }
+          },
+          "item_hmUYXn": {
+            "type": "item",
+            "settings": {
+              "icone": "shopify://shop_images/suporte.png",
+              "title": "Suporte ao cliente",
+              "text": "De segunda a sexta das 8h às 17h",
+              "link": "#"
+            }
+          },
+          "item_n7VyM7": {
+            "type": "item",
+            "settings": {
+              "icone": "shopify://shop_images/envio.png",
+              "title": "Envio em 24h",
+              "text": "Para compras via Pix",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "item_cCH9Gp",
+          "item_akWqDP",
+          "item_hmUYXn",
+          "item_n7VyM7"
         ],
         "settings": {}
       }
