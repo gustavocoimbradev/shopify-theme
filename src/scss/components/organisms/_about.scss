@@ -7,5 +7,20 @@
         text-align: center;
         margin: 0 0 24px;
     }
-
+    &__content {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &__text {
+            flex: 1;
+        }
+        &__image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            img {
+                width: 100%; 
+            }
+        }
+    }
 }
