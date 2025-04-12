@@ -4,7 +4,7 @@
     <section class="c-best-selling" data-aos="fade-in">
       <div class="u-container">
         <h1 class="c-best-selling__title">{{ section.settings.title }}</h1>
-        <div class="c-best-selling__items"> 
+        <div class="c-best-selling__items js-single-collection"> 
             {% for product in products limit: 8 %}
                 {% render 'card', product: product %}
             {% endfor %}
