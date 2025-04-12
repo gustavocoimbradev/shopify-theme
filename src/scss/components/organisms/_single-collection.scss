@@ -14,6 +14,11 @@
             transform: translateX(-50%);
             margin-left: unset;
         }  
+        article {
+            @include mobile {
+                width: 250px;
+            }
+        }
         &.slick-slider {
             position: relative;
             .slick-list { 

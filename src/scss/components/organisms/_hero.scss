@@ -1,16 +1,16 @@
 .c-hero {
     margin: 0 0 60px;
-    @include mobile {
+    @include mobile { 
         margin: 0 0 10px;
-    }
-    &__slick {
-        &__item {
-            overflow: hidden;
+    } 
+    &__slick { 
+        &__item { 
+            overflow: hidden; 
             display: flex;
-            img {
+            img {   
                 width: 100%;
                 height: auto;
-            }
+            } 
         }
         &:not(.slick-initialized) {
             >a:not(:first-of-type) {
