@@ -1,3 +1,27 @@
 .c-seals {
-
+    margin: 90px 0;
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        &__item {
+            figure {
+                height: 40px; 
+                transition: all .3s; 
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+                img {
+                    width: 64px;
+                }
+                figcaption {
+                    flex: 1;
+                }
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
 }

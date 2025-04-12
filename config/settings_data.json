@@ -98,7 +98,7 @@
       "single-collection": {
         "type": "single-collection",
         "settings": {
-          "collection": ""
+          "collection": "ofertas-do-mes"
         }
       },
       "best-selling": {
