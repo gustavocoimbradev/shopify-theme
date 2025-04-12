@@ -31,6 +31,7 @@ $(function(){
                 settings: {
                     variableWidth: true,
                     arrows: false,
+                    centerMode: true,
                 }
             }
         ]
