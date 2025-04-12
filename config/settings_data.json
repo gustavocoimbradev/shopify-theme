@@ -11,6 +11,8 @@
   "current": {
     "logo": "shopify://shop_images/CABECALHO_1.png",
     "logo-white": "shopify://shop_images/Logo_-_Telecenter_-_Completo_Branco_1.png",
+    "cnpj": "20.374.815/0001-48",
+    "phone": "35 3221-5480",
     "sections": {
       "hero": {
         "type": "hero",
