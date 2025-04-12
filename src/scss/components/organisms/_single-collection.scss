@@ -17,7 +17,6 @@
         article {
             @include mobile {
                 width: 270px;
-                max-width: 90dvw;
             }
         }
         &.slick-slider {
