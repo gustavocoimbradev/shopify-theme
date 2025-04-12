@@ -29,7 +29,7 @@
                 pointer-events: none;  
                 &.slick-active {
                     opacity: 1;
-                    // pointer-events: unset;
+                    pointer-events: unset;
                 }
             } 
             .slick-arrow {
