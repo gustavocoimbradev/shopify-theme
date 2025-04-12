@@ -13,6 +13,9 @@
     "logo-white": "shopify://shop_images/Logo_-_Telecenter_-_Completo_Branco_1.png",
     "cnpj": "20.374.815/0001-48",
     "phone": "35 3221-5480",
+    "payment_methods": "shopify://shop_images/Frame_86_2.png",
+    "carriers": "shopify://shop_images/Frame_92.png",
+    "security_seals": "shopify://shop_images/Frame_90.png",
     "sections": {
       "hero": {
         "type": "hero",
