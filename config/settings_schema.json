@@ -33,7 +33,7 @@
       {
         "type": "text",
         "id": "phone",
-        "label": "Funcionamento",
+        "label": "Telefone",
         "default": "35 3221-5480"
       },
       {
