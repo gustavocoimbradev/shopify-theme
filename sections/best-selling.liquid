@@ -1,0 +1,29 @@
+{% assign products = collections.all.products | sort: 'best-selling' %}
+
+{% if products != blank %}
+    <section class="c-best-selling" data-aos="fade-in">
+      <div class="u-container">
+        <h1 class="c-best-selling__title">{{ section.settings.title }}</h1>
+        <div class="c-best-selling__items"> 
+            {% for product in products limit: 8 %}
+                {% render 'card', product: product %}
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+{% endif %}
+  
+
+{% schema %}
+{
+    "name": "Mais vendidos",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Título",
+            "default": "Mais Vendidos"
+        }
+    ],
+}
+{% endschema %}
