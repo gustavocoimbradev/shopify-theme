@@ -1,6 +1,7 @@
 {% if section.blocks != blank %}
     <section class="c-stores" data-aos="fade-in">
       <div class="u-container">
+        <h1 class="c-stores__title">{{ section.settings.collection.title }}</h1>
         <div class="c-stores__items"> 
           {% for block in section.blocks %}
             {% assign delay = forloop.index0 | times: 300 %}

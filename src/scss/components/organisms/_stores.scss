@@ -1,5 +1,9 @@
 .c-stores {
     margin: 0 0 80px;
+    &__title {
+        text-align: center;
+        margin: 0 0 24px;
+    }
     &__items {
         display: flex;
         align-items: center;
