@@ -11,13 +11,22 @@
         display: flex;
         gap: 20px;
         align-items: center;
+        @include mobile {
+            flex-direction: column-reverse;
+        }
         &__text {
             flex: 1;
+            @include mobile {
+                width: 100%;
+            }
         }
         &__image {
             flex: 1;
             border-radius: 20px;
             overflow: hidden;
+            @include mobile {
+                width: 100%;
+            }
             img {
                 width: 100%; 
             }

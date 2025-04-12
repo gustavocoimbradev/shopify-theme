@@ -2,15 +2,48 @@
     <div class="u-container">
         <div class="l-footer__top">
             <div class="l-footer__top__primary">
-                {% if settings.logo-white %}
-                    <a href="{{ routes.root_url }}">
-                        <img
-                        src="{{ settings.logo-white | image_url }}"
-                        alt="Logo da loja" 
-                        width="305"
-                        >
-                    </a>
-                {% endif %}
+                <div>
+                    {% if settings.logo-white %}
+                        <a href="{{ routes.root_url }}">
+                            <img
+                            src="{{ settings.logo-white | image_url }}"
+                            alt="Logo da loja" 
+                            width="305"
+                            >
+                        </a>
+                    {% endif %}
+                    <h5>{{ settings.slogan }}</h5>
+                </div>
+                <div>
+                    <h5>{{ linklists.footer.title }}</h5>
+                    <ul>
+                        {% for link in linklists.footer.links %}
+                            <li class="{% if link.links != blank %} has-children {% endif %}">
+                                <a href="{{ link.url }}">
+                                    {{ link.title }}
+                                </a>
+                                {% if link.links != blank %}
+                                    <ul>
+                                        {% for child_link in link.links %}
+                                            <li>
+                                                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h5>Atendimento</h5>
+                    <ul>
+                        <li>{{ settings.operation }}</li>
+                        <li>{{ settings.phone }}</li>
+                        <li>{{ settings.email }}</li>
+                        <li>{{ settings.address }}</li>
+                    </ul>
+                </div>
             </div>
             <div class="l-footer__top__secondary">
                 
