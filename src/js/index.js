@@ -32,6 +32,7 @@ $(function(){
                     variableWidth: true,
                     arrows: false,
                     centerMode: true,
+                    infinite: true,
                 }
             }
         ]
