@@ -2,7 +2,7 @@
     "name": "telecenter-eletronica",
     "version": "1.0.0",
     "scripts": {
-        "dev": "concurrently \"npx gulp watch\" \"shopify theme dev --store=telecenter-eletronica --poll\"",
+        "dev": "concurrently \"npx gulp watch\" \"shopify theme dev --store=telecenter-eletronica\"",
         "publish": "git add . && git pull && git commit -m \"telecenter-eletronica\" && git push && shopify theme push --theme \"telecenter-eletronica\" --allow-live --force --ignore \"config/settings_data.json\""
     },
     "devDependencies": {

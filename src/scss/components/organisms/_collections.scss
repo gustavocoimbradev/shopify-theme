@@ -2,14 +2,14 @@
     margin: 60px 0 93px;
     @include mobile {
         margin: 0 0 20px;
-    }
+    } 
     &__items {
         display: flex;
-        gap: 74px;
-        @include mobile {
+        gap: 74px;   
+        @include mobile { 
             overflow-x: auto; 
             scroll-snap-type: x mandatory;
-            scroll-padding-left: 50%;
+            scroll-padding-left: 50%; 
             scroll-padding-right: 50%;
             -webkit-overflow-scrolling: touch;
             gap: 1rem;
