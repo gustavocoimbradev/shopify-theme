@@ -1,13 +1,23 @@
 <footer class="l-footer">
     <div class="u-container">
         <div class="l-footer__top">
-            
+            <div class="l-footer__top__primary">
+                {% if settings.logo-white %}
+                    <a href="{{ routes.root_url }}">
+                        <img
+                        src="{{ settings.logo-white | image_url }}"
+                        alt="Logo da loja" 
+                        width="305"
+                        >
+                    </a>
+                {% endif %}
+            </div>
+            <div class="l-footer__top__secondary">
+                
+            </div>
         </div>
-        <div class="l-footer__middle">
-            
-        </div>
-        <div class="l-footer__middle">
-            Feito com ❤ por <a href="https://lovifydigital.com/" target="_blank">Lovify</a>
+        <div class="l-footer__bottom">
+            <span>Feito com ❤ por <a href="https://lovifydigital.com/" target="_blank">Lovify</a></span>
         </div>
     </div>
 </footer> 

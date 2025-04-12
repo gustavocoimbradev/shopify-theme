@@ -11,6 +11,11 @@
         "type": "image_picker",
         "id": "logo-white",
         "label": "Logo da loja (branco)"
+      },
+      {
+        "type": "text",
+        "id": "cnpj",
+        "label": "CNPJ"
       }
     ]
   }
