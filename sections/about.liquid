@@ -1,0 +1,36 @@
+<section class="c-about" data-aos="fade-in">
+    <div class="u-container">
+        <h1 class="c-about__title">{{ section.settings.title }}</h1>
+        <div class="c-about__content">
+            <div class="c-about__text">
+                {{ section.settings.text }}
+            </div>
+            <figure class="c-about__image"> 
+                <img src="{{ section.settings.image | img_url: 'original' }}" alt="">
+            </figure>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Sobre",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Título",
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Texto",
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Escolha uma imagem",
+        }
+    ],
+}
+{% endschema %}
