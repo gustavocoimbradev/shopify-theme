@@ -52,6 +52,12 @@
         "settings": {
           "collection": "ofertas-do-mes"
         }
+      },
+      "banner": {
+        "type": "banner",
+        "settings": {
+          "banner": "shopify://shop_images/BANNER3_1.png"
+        }
       }
     },
     "content_for_index": [],
