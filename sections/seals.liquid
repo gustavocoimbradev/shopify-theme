@@ -1,0 +1,65 @@
+{% if section.blocks != blank %}
+    <section class="c-seals" data-aos="fade-in">
+      <div class="u-container">
+        <div class="c-seals__items"> 
+          {% for block in section.blocks %}
+            {% assign delay = forloop.index0 | times: 300 %}
+            <a class="c-seals__items__item" href="{{ block.settings.link }}" data-aos="fade-in" data-aos-delay="{{ delay }}">
+              <figure>
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | img_url: 'medium' }}" alt="">
+                {% endif %}
+                <figcaption>
+                    <h5>{{ block.settings.title }}</h5>
+                    <p>{{ block.settings.texto }}</p>
+                </figcaption>
+              </figure>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+{% endif %}
+  
+
+{% schema %}
+{
+    "name": "Selos",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icone",
+                    "label": "Ícone"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Título"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Texto"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "max_blocks": 4,
+    "presets": [
+        {
+        "name": "Selos",
+        "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
