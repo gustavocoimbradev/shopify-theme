@@ -1,5 +1,5 @@
 $(function () {
     AOS.init({ duration: 1500 });
-    $('a[href="#"]').attr("href","javascript:void(0)");
+    $('a[href="#"]').add('a[href=""]').attr("href","javascript:void(0)");
 });
    
