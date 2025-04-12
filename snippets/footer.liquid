@@ -1,17 +1,20 @@
 <footer class="l-footer">
-    <div class="u-container">
-        <div class="l-footer__top">
+    <div class="l-footer__top">
+        <div class="u-container">
             <div class="l-footer__top__primary">
                 <div>
-                    {% if settings.logo-white %}
-                        <a href="{{ routes.root_url }}">
-                            <img
-                            src="{{ settings.logo-white | image_url }}"
-                            alt="Logo da loja" 
-                            width="305"
-                            >
-                        </a>
-                    {% endif %}
+                    <div>
+                        {% if settings.logo-white %}
+                            <a href="{{ routes.root_url }}">
+                                <img
+                                src="{{ settings.logo-white | image_url }}"
+                                alt="Logo da loja" 
+                                width="305"
+                                >
+                            </a>
+                        {% endif %}
+                        <p>CNPJ: {{ settings.cnpj }}</p>
+                    </div>
                     <h5>{{ settings.slogan }}</h5>
                 </div>
                 <div>
@@ -46,11 +49,33 @@
                 </div>
             </div>
             <div class="l-footer__top__secondary">
-                
+                <div>
+                    <h6>Formas de Pagamento</h6>
+                    <img
+                        src="{{ settings.payment_methods | image_url }}"
+                        alt="" 
+                        >
+                </div>
+                <div>
+                    <h6>Entregas</h6>
+                    <img
+                        src="{{ settings.carriers | image_url }}"
+                        alt="" 
+                        >
+                </div>
+                <div>
+                    <h6>Selos de Segurança</h6>
+                    <img
+                        src="{{ settings.security_seals | image_url }}"
+                        alt="" 
+                        >
+                </div>
             </div>
         </div>
-        <div class="l-footer__bottom">
-            <span>Feito com ❤ por <a href="https://lovifydigital.com/" target="_blank">Lovify</a></span>
+    </div>
+    <div class="l-footer__bottom">
+        <div class="u-container">
+            <span>Feito com ❤️ por <a href="https://lovifydigital.com/" target="_blank">Lovify</a></span>
         </div>
     </div>
 </footer> 

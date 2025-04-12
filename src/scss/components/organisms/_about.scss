@@ -1,7 +1,7 @@
 .c-about {
     margin: 0 0 80px;
     @include mobile {
-        margin: 50px 0;
+        margin: 0 0 50px;
     }
     &__title {
         text-align: center;
