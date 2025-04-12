@@ -4,8 +4,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 70px;
+        gap: 20px;
         &__item {
+            flex: 1;
             figure {
                 height: 40px; 
                 transition: all .3s; 
