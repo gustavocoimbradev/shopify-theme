@@ -15,7 +15,38 @@
       {
         "type": "text",
         "id": "cnpj",
-        "label": "CNPJ"
+        "label": "CNPJ",
+        "default": "20.374.815/0001-48"
+      },
+      {
+        "type": "text",
+        "id": "slogan",
+        "label": "Slogan",
+        "default": "Desde 1978 conectando você ao futuro!"
+      },
+      {
+        "type": "text",
+        "id": "operation",
+        "label": "Funcionamento",
+        "default": "Seg. a Sex. 8h30 às 17h."
+      },
+      {
+        "type": "text",
+        "id": "phone",
+        "label": "Funcionamento",
+        "default": "35 3221-5480"
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "label": "E-mail",
+        "default": "telecentervendas@gmail.com"
+      },
+      {
+        "type": "text",
+        "id": "address",
+        "label": "Endereço",
+        "default": "Av. Major Venâncio, n°315, Centro 37002-500"
       }
     ]
   }
