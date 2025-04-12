@@ -1,10 +1,10 @@
 {% if section.settings.collections != blank %}
-    <section class="c-collections">
+    <section class="c-collections" data-aos="fade-in">
         <div class="u-container">
             <div class="c-collections__items"> 
                 {% for collection in section.settings.collections %}
                     {% assign delay = forloop.index0 | times: 300 %}
-                    <a class="c-collections__items__item" href="{{ collection.url }}" data-aos="fade-up" data-aos-delay="{{ delay }}">
+                    <a class="c-collections__items__item" href="{{ collection.url }}" data-aos="fade-in" data-aos-delay="{{ delay }}">
                         <figure>
                             <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
                             <figcaption>{{ collection.title }}</figcaption>
