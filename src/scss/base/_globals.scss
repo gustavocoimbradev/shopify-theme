@@ -1,9 +1,12 @@
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     color: get-color(neutral, darkGray);
     background: get-color(neutral, lightGray);
     overflow-x: hidden;
     font-family: "Space Grotesk", sans-serif; 
-    overflow-x: hidden;
 }   
 
 *, *::before, *::after {
