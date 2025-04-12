@@ -1,8 +1,13 @@
-.u-container { 
-margin: 0 auto;  
-max-width: 1120px; 
-width: 100%;  
+.u-container {
+    margin: 0 auto;
+    width: 100%;
+  
     @include mobile {
-        width: calc(100% - 32px); 
-    }  
-}  
+      width: calc(100% - 32px);
+    }
+  
+    @include desktop { 
+      max-width: 1120px;
+    }
+  }
+  
