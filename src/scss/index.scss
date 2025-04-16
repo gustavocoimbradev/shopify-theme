@@ -10,10 +10,11 @@
 
 // Organisms 
 @import "components/organisms/hero";
-@import "components/organisms/single-collection";
 @import "components/organisms/collections"; 
 @import "components/organisms/banner";
 @import "components/organisms/stores";
-@import "components/organisms/best-selling";
 @import "components/organisms/seals";
 @import "components/organisms/about"; 
+
+// Organisms (reused)
+@import "components/organisms/products-single-line";

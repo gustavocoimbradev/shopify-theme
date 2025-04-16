@@ -1,0 +1,18 @@
+{% assign related_products = product.collections.first.products %}
+
+{% if related_products != blank %}
+  <section class="c-products-single-line" data-aos="fade-in">
+    <div class="u-container">
+      <h1 class="c-products-single-line__title">Outros produtos</h1>
+      <div class="c-products-single-line__items js-products-single-line js-products-random"> 
+        {% for related_product in related_products %}
+          {% if related_product.id != product.id %}
+            <div class="js-product-card">
+              {% render 'card', product: related_product %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}

@@ -1,8 +1,8 @@
 {% if section.settings.collection %} 
-  <section class="c-single-collection" data-aos="fade-in">
+  <section class="c-products-single-line" data-aos="fade-in">
     <div class="u-container"> 
-      <h1 class="c-single-collection__title">{{ section.settings.collection.title }}</h1>
-      <div class="c-single-collection__items js-single-collection"> 
+      <h1 class="c-products-single-line__title">{{ section.settings.collection.title }}</h1>
+      <div class="c-products-single-line__items js-products-single-line"> 
         {% for product in section.settings.collection.products %}
           {% render 'card', product: product %}
         {% endfor %}
