@@ -2,11 +2,12 @@
 @import "abstracts";
 
 // ⚛️ Atoms
-@import "components/atoms/a-button";
-@import "components/atoms/a-stars";
+@import "ui/atoms/a-button";
+@import "ui/atoms/a-stars";
 
 // 🧪 Molecules
-@import "components/molecules/m-card";
+@import "ui/molecules/m-card";
 
 // 🧬 Organisms
-@import "components/organisms/o-featured-products";
+@import "ui/organisms/o-recommended";
+ 

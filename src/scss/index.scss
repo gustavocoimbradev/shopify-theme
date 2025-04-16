@@ -2,18 +2,18 @@
 @import "abstracts";
 
 // ⚛️ Atoms
-@import "components/atoms/a-button";
-@import "components/atoms/a-stars";
+@import "ui/atoms/a-button";
+@import "ui/atoms/a-stars";
 
 // 🧪 Molecules
-@import "components/molecules/m-card";
+@import "ui/molecules/m-card";
 
 // 🧬 Organisms
-@import "components/organisms/o-hero";
-@import "components/organisms/o-collections";
-@import "components/organisms/o-single-collection";
-@import "components/organisms/o-banner";
-@import "components/organisms/o-stores";
-@import "components/organisms/o-best-selling";
-@import "components/organisms/o-seals";
-@import "components/organisms/o-about";
+@import "ui/organisms/o-hero";
+@import "ui/organisms/o-collections";
+@import "ui/organisms/o-single-collection";
+@import "ui/organisms/o-banner";
+@import "ui/organisms/o-stores";
+@import "ui/organisms/o-best-selling";
+@import "ui/organisms/o-seals";
+@import "ui/organisms/o-about";
