@@ -1,12 +1,12 @@
 {% assign products = collections.all.products | sort: 'best-selling' %}
 
 {% if products != blank %}
-    <section class="c-products-single-line" data-aos="fade-in">
-      <div class="u-container">
-        <h1 class="c-products-single-line__title">{{ section.settings.title }}</h1>
-        <div class="c-products-single-line__items js-products-single-line"> 
+    <section class="o-featured-products" data-aos="fade-in">
+      <div class="container">
+        <h1 class="o-featured-products__title">{{ section.settings.title }}</h1>
+        <div class="o-featured-products__items js-products-single-line"> 
             {% for product in products limit: 8 %}
-                {% render 'card', product: product %}
+                {% render 'm-card', product: product %}
             {% endfor %}
         </div>
       </div>

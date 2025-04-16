@@ -1,4 +1,12 @@
-@import "abstracts";
-@import "base";
-@import "utilities";
-@import "layout";
+// 🧠 SCSS logic 
+@import "abstracts";  
+
+// 🧱 Base styles 
+@import "base";        
+
+// 🧰 Utilities 
+@import "utilities"; 
+
+// 🌍 Global UI components
+@import "ui/organisms/o-header"; 
+@import "ui/organisms/o-footer";  

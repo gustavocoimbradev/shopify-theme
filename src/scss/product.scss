@@ -1,12 +1,12 @@
-// Abstracts 
+// 🧠 SCSS logic
 @import "abstracts";
 
-// Atoms
-@import "components/atoms/button";
-@import "components/atoms/stars";
+// ⚛️ Atoms
+@import "components/atoms/a-button";
+@import "components/atoms/a-stars";
 
-// Molecules 
-@import "components/molecules/card";
+// 🧪 Molecules
+@import "components/molecules/m-card";
 
-// Organisms 
-@import "components/organisms/products-single-line";
+// 🧬 Organisms
+@import "components/organisms/o-featured-products";

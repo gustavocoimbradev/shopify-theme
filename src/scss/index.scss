@@ -1,20 +1,19 @@
-// Abstracts 
+// 🧠 SCSS logic
 @import "abstracts";
 
-// Atoms
-@import "components/atoms/button";
-@import "components/atoms/stars";
+// ⚛️ Atoms
+@import "components/atoms/a-button";
+@import "components/atoms/a-stars";
 
-// Molecules 
-@import "components/molecules/card";
+// 🧪 Molecules
+@import "components/molecules/m-card";
 
-// Organisms 
-@import "components/organisms/hero";
-@import "components/organisms/collections"; 
-@import "components/organisms/banner";
-@import "components/organisms/stores";
-@import "components/organisms/seals";
-@import "components/organisms/about"; 
-
-// Organisms (reused)
-@import "components/organisms/products-single-line";
+// 🧬 Organisms
+@import "components/organisms/o-hero";
+@import "components/organisms/o-collections";
+@import "components/organisms/o-single-collection";
+@import "components/organisms/o-banner";
+@import "components/organisms/o-stores";
+@import "components/organisms/o-best-selling";
+@import "components/organisms/o-seals";
+@import "components/organisms/o-about";
