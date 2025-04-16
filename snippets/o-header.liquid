@@ -52,7 +52,7 @@
 
 {% unless template == 'index' %}
   <nav class="m-breadcrumb">
-    <div class="c-container">
+    <div class="container">
         <a href="{{ routes.root_url }}">Página Inicial</a>
             {% if template contains 'collection' and collection %}
             / {{ collection.title }}

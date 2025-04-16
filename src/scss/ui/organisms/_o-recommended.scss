@@ -1,5 +1,8 @@
-@import "ui/organisms/o-featured-products";
-
 .o-recommended {
-    @extend .o-featured-products;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  
+    @include featured-list;
 }
