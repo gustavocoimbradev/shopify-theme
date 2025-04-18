@@ -18,16 +18,16 @@ const paths = {
 
 // Remove warnings chatos do Sass
 function muteWarnings() {
-  const originalWrite = process.stderr.write;
-  process.stderr.write = function (str, encoding, fd) {
-    if (
-      str.includes("Deprecation Warning") ||
-      str.includes("deprecation warning")
-    ) {
-      return;
-    }
-    return originalWrite.apply(process.stderr, arguments);
-  };
+  // const originalWrite = process.stderr.write;
+  // process.stderr.write = function (str, encoding, fd) {
+  //   if (
+  //     str.includes("Deprecation Warning") ||
+  //     str.includes("deprecation warning")
+  //   ) {
+  //     return;
+  //   }
+  //   return originalWrite.apply(process.stderr, arguments);
+  // };
 }
 
 // Limpa as pastas de build

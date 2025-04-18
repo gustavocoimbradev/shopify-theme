@@ -1,0 +1,33 @@
+<section class="o-product-information">
+    <div class="container">
+        <div class="o-product-information__gallery" data-aos="fade-in">
+            <div class="o-product-information__gallery__images o-product-information__gallery__images--current js-gallery-current">
+                {% for image in product.images %}
+                    <figure>
+                    <img
+                        src="{{ image | image_url: width: 522 }}"
+                        alt="{{ image.alt | escape }}"
+                        width="522"
+                        height="522"
+                    >
+                    </figure>
+                {% endfor %}
+            </div>
+            <div class="o-product-information__gallery__images o-product-information__gallery__images--all js-gallery-all">
+                {% for image in product.images %}
+                <figure>
+                    <img
+                    src="{{ image | image_url: width: 167 }}"
+                    alt="{{ image.alt | escape }}"
+                    width="167"
+                    height="167"
+                    >
+                </figure>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="o-product-information__main">
+            Teste
+        </div>
+    </div>
+</section>
