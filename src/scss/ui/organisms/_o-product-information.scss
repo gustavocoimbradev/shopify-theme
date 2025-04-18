@@ -2,7 +2,7 @@
     .container {
         display: flex;
         align-items: flex-start;
-        gap: 128px;
+        gap: 60px;
         @include mobile {
             gap: 32px;
             flex-direction: column;
@@ -34,6 +34,10 @@
                     &.slick-next {
                         right: 22px;
                     }
+                }
+                img {
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
             &--all {

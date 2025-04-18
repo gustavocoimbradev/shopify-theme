@@ -62,6 +62,14 @@
         "type": "image_picker",
         "id": "security_seals",
         "label": "Selos de segurança",
+      },
+      {
+        "type": "range",
+        "id": "pix",
+        "label": "Desconto no PIX (em porcentagem)",
+        "min": 0,
+        "max": 100,
+        "step": 1
       }
     ]
   }

@@ -27,6 +27,21 @@
             </div>
         </div>
         <div class="o-product-information__main">
+            <h2 class="o-product-information__main__title">
+                {{ product.title }}
+            </h2>
+            <p class="o-product-information__main__code">
+                Código: {{ product.variants.first.sku }}
+            </p>
+            <p class="o-product-information__main__original-price">
+                {{ product.compare_at_price | money }}
+            </p>
+            <h1 class="o-product-information__main__current-price">
+                {{ product.price | money }}
+            </h1>
+            <p class="o-product-information__main__pix">
+                À vista no <strong>PIX com 10% OFF</strong>
+            </p>
             <div class="o-product-information__main__description">
                 {{ product.description }}
             </div>
