@@ -36,8 +36,9 @@
         .slick-list { 
             overflow: visible;
         }
-        .slick-slide {
+        .slick-slide { 
             pointer-events: none;  
+            opacity: 0;
             &.slick-active {
                 opacity: 1;
                 pointer-events: unset;

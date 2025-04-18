@@ -16,7 +16,7 @@
         {{ content_for_layout }}
         {% render 'o-footer' %}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-        {% comment %} <script type="text/javascript" src="//unpkg.com/aos@2.3.1/dist/aos.js" defer></script> {% endcomment %}
+        <script type="text/javascript" src="//unpkg.com/aos@2.3.1/dist/aos.js" defer></script> 
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
         <script src="{{ 'global.min.js' | asset_url }}" defer></script>
         {% if template.name and template.name != blank %}

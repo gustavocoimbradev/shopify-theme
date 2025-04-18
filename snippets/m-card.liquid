@@ -1,14 +1,13 @@
 <article class="m-card">
-    <a href="{{ product.url }}">
-        <figure>
-            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-        </figure>
-        <h5>{{ product.title }}</h5>
-    </a>
-    {% render '-stars', product: product %}
-    <p>{{ product.price | money }}</p>
-    <a href="/cart/add?id={{ product.variants.first.id }}" class="a-button a-button--gradient-primary a-button--small">
-        <span>Adicionar ao carrinho</span>
-    </a>
+  <a href="{{ product.url }}">
+    <figure>
+      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+    </figure>
+    <h5>{{ product.title }}</h5>
+  </a>
+  {% render 'a-stars', product: product %}
+  <p>{{ product.price | money }}</p>
+  <a href="/cart/add?id={{ product.variants.first.id }}" class="a-button a-button--gradient-primary a-button--small">
+    <span>Adicionar ao carrinho</span>
+  </a>
 </article>
-  

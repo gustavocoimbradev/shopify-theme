@@ -1,8 +1,15 @@
-.o-hero {
+.o-hero { 
     margin: 0 0 60px;
-    @include mobile { 
-        margin: 0 0 10px;
+ 
+    @include mobile {  
+        margin: 0 0 10px;  
     } 
+
+    .container {
+        border-radius: 16px;
+        overflow: hidden;  
+    }
+
     &__slick { 
         &__item { 
             overflow: hidden; 

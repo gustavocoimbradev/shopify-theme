@@ -1,13 +1,15 @@
 {% if section.blocks != blank %}
   <section class="o-hero" data-aos="fade-in">
-    <div class="o-hero__slick js-hero">
-      {% for block in section.blocks %}
-          <a class="o-hero__slick__item" href="{% if block.settings.link != blank %} {{ block.settings.link }}{% else %}javascript:void(0){% endif %}">
-            <figure>
-              <img src="{{ block.settings.imagem | img_url: 'master' }}" alt="" width="" height="">
-            </figure>
-          </a>
-      {% endfor %}
+    <div class="container">
+      <div class="o-hero__slick js-hero">
+        {% for block in section.blocks %}
+            <a class="o-hero__slick__item" href="{% if block.settings.link != blank %} {{ block.settings.link }}{% else %}javascript:void(0){% endif %}">
+              <figure>
+                <img src="{{ block.settings.imagem | img_url: 'master' }}" alt="" width="" height="">
+              </figure>
+            </a>
+        {% endfor %}
+      </div>
     </div>
   </section>
 {% endif %}
