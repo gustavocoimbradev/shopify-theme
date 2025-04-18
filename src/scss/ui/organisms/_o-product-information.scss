@@ -4,6 +4,10 @@
         display: flex;
         align-items: flex-start;
         gap: 128px;
+        @include mobile {
+            gap: 32px;
+            flex-direction: column;
+        }
     }
 
     &__gallery {
@@ -66,9 +70,17 @@
 
     &__main {
         flex: 1;
-
         @include mobile {
             width: 100%;
+        }
+        &__description {
+            font-size: 14px;
+            ul {
+                li {
+                    list-style-type: disc;
+                    margin-left: 20px;
+                }
+            }
         }
     }
 }
