@@ -69,7 +69,17 @@
         "label": "Desconto no PIX (em porcentagem)",
         "min": 0,
         "max": 100,
-        "step": 1
+        "step": 1,
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "installments",
+        "label": "Parcelas sem juros no cartão",
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "default": 3
       }
     ]
   }

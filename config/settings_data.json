@@ -16,6 +16,8 @@
     "payment_methods": "shopify://shop_images/Frame_86_2.png",
     "carriers": "shopify://shop_images/Frame_92.png",
     "security_seals": "shopify://shop_images/Frame_90.png",
+    "pix": 10,
+    "installments": 3,
     "sections": {
       "o-hero": {
         "type": "o-hero",

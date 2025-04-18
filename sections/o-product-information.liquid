@@ -30,18 +30,46 @@
             <h2 class="o-product-information__main__title">
                 {{ product.title }}
             </h2>
-            <p class="o-product-information__main__code">
+            <p class="o-product-information__main__sku">
                 Código: {{ product.variants.first.sku }}
             </p>
-            <p class="o-product-information__main__original-price">
+            {% assign desconto_pix = product.price | times: settings.pix | divided_by: 100.0 %}
+            {% assign preco_pix = product.price | minus: desconto_pix %}
+
+            <p class="o-product-information__main__old-price">
                 {{ product.compare_at_price | money }}
             </p>
-            <h1 class="o-product-information__main__current-price">
-                {{ product.price | money }}
+            <h1 class="o-product-information__main__price-with-discount">
+                {{ preco_pix | money }}
             </h1>
-            <p class="o-product-information__main__pix">
-                À vista no <strong>PIX com 10% OFF</strong>
+            {% if settings.pix > 0 %}
+                <p class="o-product-information__main__pix">
+                    À vista no <strong>PIX com {{ settings.pix }}% OFF</strong>
+                </p>    
+            {% endif %}
+            <h3 class="o-product-information__main__original-price">
+                {{ product.price | money }}
+            </h3>
+            {% if settings.installments > 0 %}
+                {% assign installment = product.price | divided_by: settings.installments %}
+                <p class="o-product-information__main__installments">
+                    Em até {{ settings.installments }}x de {{ installment | money }} sem juros no cartão
+                </p>
+            {% endif %}
+            <p class="o-product-information__main__quantity-label">
+                <strong>Quantidade</strong>
             </p>
+            <form method="post" action="/cart/add">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                <div class="o-product-information__main__quantity-field">
+                    <button type="button" class="js-decrease decrease">&#45;</button>
+                    <input readonly name="quantity" value="1">
+                    <button type="button" class="js-increase increase">&#43;</button>
+                </div>
+                <button class="o-product-information__main__button a-button a-button--gradient-primary a-button--large" type="submit">
+                    <span>Adicionar ao carrinho</span>
+                </button>
+            </form>
             <div class="o-product-information__main__description">
                 {{ product.description }}
             </div>

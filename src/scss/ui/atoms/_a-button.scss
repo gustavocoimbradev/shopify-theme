@@ -44,4 +44,14 @@
         letter-spacing: 0.8px;
         }
     }
+    &--large {
+        height: 70px;
+        span {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.8px;
+        }
+    }
 }

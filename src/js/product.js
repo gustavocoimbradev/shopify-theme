@@ -30,6 +30,22 @@ $(function(){
         swipe: false,
     });
 
+    // Quantity
+
+    $(".js-decrease").click(function(){
+        const selector = $("input[name='quantity']");
+        const currentQuantity = parseInt(selector.val());
+        const newQuantity = currentQuantity - 1;
+        if (newQuantity > 0) selector.val(newQuantity);
+    })
+
+    $(".js-increase").click(function(){
+        const selector = $("input[name='quantity']");
+        const currentQuantity = parseInt(selector.val());
+        const newQuantity = currentQuantity + 1;
+        if (newQuantity < 100) selector.val(newQuantity);
+    })
+
     // Featured list
 
     var $container = $(".js-products-random");

@@ -76,6 +76,62 @@
         @include mobile {
             width: 100%;
         }
+        &__title {
+            margin: 0 0 16px;
+        }
+        &__sku {
+            margin: 0 0 32px;
+        }
+        &__old-price {
+        }
+        &__price-with-discount {
+        }
+        &__pix {
+            margin: 0 0 24px;
+        }
+        &__original-price {
+            margin: 0 0 4px;
+        }
+        &__installments {
+            margin: 0 0 24px;
+        }
+        &__quantity-label {
+            margin: 0 0 12px;
+        }
+        &__quantity-field {
+            position: relative;
+            width: max-content;
+            margin: 0 0 39px;
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 16px;
+                font-weight: 900;
+                color: get-color(neutral, gray);
+                cursor: pointer;
+                &.decrease {
+                    left: 10px;
+                }
+                &.increase {
+                    right: 10px;
+                }
+            }
+            input {
+                border-radius: 10px;
+                border: 2px solid get-color(neutral, gray);
+                text-align: center;
+                height: 40px;
+                color: get-color(neutral, darkGray);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.8px;
+                width: 180px;
+                pointer-events: none;
+            }
+        }
         &__description {
             font-size: 14px;
             ul {
