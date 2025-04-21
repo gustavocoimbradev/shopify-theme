@@ -5,9 +5,12 @@
         display: inline-block;
         font-size: initial;
         &.active {
-        path {
-            fill: get-color(secondary, 100);
+            path {
+                fill: get-color(secondary, 100);
+            }
         }
+        .jdgm-prev-badge__text {
+            display: none !important;
         }
     }
 }
