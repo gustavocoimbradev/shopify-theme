@@ -1,22 +1,6 @@
 <main class="product">
     {% section 'o-product-information' %}
     {% section 'o-seals' %}
+    {% section 'o-reviews' %}
     {% section 'o-recommended' %}
 </main>  
-
-<!--
-
-<h1>Produto</h1>
-
-<h2>{{ product.title }}</h2>
-<img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="250" height="250">
-<p>{{ product.price | money }}</p>
-
-<form method="post" action="/cart/add">
-<input type="hidden" name="id" value="{{ product.variants.first.id }}">
-<button type="submit" class="bg-indigo-500">Adicionar ao carrinho</button>
-</form>
-
-<div style='clear:both'></div><div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>{{ product.metafields.judgeme.widget }}</div>
-
--->

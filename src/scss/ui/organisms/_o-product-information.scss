@@ -83,11 +83,19 @@
             margin: 0 0 32px;
         }
         &__old-price {
+            margin: 0 0 8px;
+            font-size: 14px;
+            text-decoration: line-through;
+            opacity: .7;
         }
         &__price-with-discount {
+            margin: 0 0 8px;
         }
         &__pix {
             margin: 0 0 24px;
+            strong {
+                color: get-color(primary, 200);
+            }
         }
         &__original-price {
             margin: 0 0 4px;
@@ -131,6 +139,15 @@
                 width: 180px;
                 pointer-events: none;
             }
+        }
+        &__button {
+            width: 100%;
+            text-transform: uppercase;
+            margin: 0 0 38px;
+        }
+        &__shipping {
+            margin: 0 0 32px;
+            color: red;
         }
         &__description {
             font-size: 14px;

@@ -6,7 +6,12 @@
     <h5>{{ product.title }}</h5>
   </a>
   {% render 'a-stars', product: product %}
-  <p>{{ product.price | money }}</p>
+
+  {% assign desconto_pix = product.price | times: settings.pix | divided_by: 100.0 %}
+  {% assign preco_pix = product.price | minus: desconto_pix %}
+
+  <p>{{ product.compare_at_price | money }}</p> 
+  <h2>{{ preco_pix | money }}</h2>
   <a href="/cart/add?id={{ product.variants.first.id }}" class="a-button a-button--gradient-primary a-button--small">
     <span>Adicionar ao carrinho</span>
   </a>

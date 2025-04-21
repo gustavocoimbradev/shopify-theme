@@ -36,12 +36,20 @@
         margin: 0; 
     }
     p {
+        opacity: .7;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        margin: 0;
+        text-decoration: line-through;
+    }
+    h2 {
         color: get-color(primary, 200);
-        font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        margin: 0;
     }
     >a:last-of-type {
         margin: 8px 0 0;  

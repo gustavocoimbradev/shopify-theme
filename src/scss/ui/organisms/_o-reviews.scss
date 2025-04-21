@@ -1,0 +1,6 @@
+.o-reviews {
+    .jdgm-write-rev-link {
+        border-radius: 999px;
+        @extend .a-button, .a-button--gradient-primary, .a-button--normal;
+    }
+}

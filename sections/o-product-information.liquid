@@ -38,7 +38,7 @@
 
             <p class="o-product-information__main__old-price">
                 {{ product.compare_at_price | money }}
-            </p>
+            </p> 
             <h1 class="o-product-information__main__price-with-discount">
                 {{ preco_pix | money }}
             </h1>
@@ -53,7 +53,7 @@
             {% if settings.installments > 0 %}
                 {% assign installment = product.price | divided_by: settings.installments %}
                 <p class="o-product-information__main__installments">
-                    Em até {{ settings.installments }}x de {{ installment | money }} sem juros no cartão
+                    Em até {{ settings.installments }}x de <strong>{{ installment | money }}</strong> sem juros no cartão
                 </p>
             {% endif %}
             <p class="o-product-information__main__quantity-label">
@@ -66,10 +66,13 @@
                     <input readonly name="quantity" value="1">
                     <button type="button" class="js-increase increase">&#43;</button>
                 </div>
-                <button class="o-product-information__main__button a-button a-button--gradient-primary a-button--large" type="submit">
+                <button class="o-product-information__main__button a-button a-button--gradient-primary a-button--normal" type="submit">
                     <span>Adicionar ao carrinho</span>
                 </button>
             </form>
+            <div class="o-product-information__main__shipping">
+                // TODO: ADICIONAR WIDGET DE CALCULO DE FRETE
+            </div>
             <div class="o-product-information__main__description">
                 {{ product.description }}
             </div>
