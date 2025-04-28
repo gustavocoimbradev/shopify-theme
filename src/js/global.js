@@ -13,7 +13,7 @@ $(function () {
     function checkScroll() {
       const header = document.querySelector('.js-header');
       if (!header) return;
-      if (window.scrollY > 100) {
+      if (window.scrollY > 20) {
         header.classList.add('is-active');
       } else {
         header.classList.remove('is-active');

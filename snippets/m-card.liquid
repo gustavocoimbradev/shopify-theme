@@ -1,20 +1,18 @@
-<article class="m-card">
-  <a href="{{ product.url }}">
-    <figure>
-      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    </figure>
-    <h5>{{ product.title }}</h5>
-  </a>
-  {% render 'a-stars', product: product %}
+<a href="{{ product.url }}" class="m-card" 
+  data-price="{{ product.price | divided_by: 100 }}" 
+  data-compare-at-price="{{ product.compare_at_price | divided_by: 100 }}" 
+  data-title="{{ product.title }}">
+ <figure>
+   <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+ </figure>
+ <h5>{{ product.title }}</h5>
+ {% render 'a-stars', product: product %}
 
-  {% assign desconto_pix = product.price | times: settings.pix | divided_by: 100.0 %}
-  {% assign preco_pix = product.price | minus: desconto_pix %}
+ {% assign desconto_pix = product.price | times: settings.pix | divided_by: 100.0 %}
+ {% assign preco_pix = product.price | minus: desconto_pix %}
 
-  {% if product.compare_at_price > 0 %}
-    <p>{{ product.compare_at_price | money }}</p> 
-  {% endif %}
-  <h2>{{ preco_pix | money }}</h2>
-  {% comment %} <a href="/cart/add?id={{ product.variants.first.id }}" class="a-button a-button--gradient-primary a-button--small">
-    <span>Adicionar ao carrinho</span>
-  </a> {% endcomment %}
-</article>
+ {% if product.compare_at_price > 0 %}
+   <p>{{ product.compare_at_price | money }}</p> 
+ {% endif %}
+ <h2>{{ preco_pix | money }}</h2>
+</a>

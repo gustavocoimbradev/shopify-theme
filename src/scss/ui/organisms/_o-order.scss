@@ -1,0 +1,29 @@
+.o-order {
+    form {
+        display: flex;
+        align-items: center; 
+        gap: 11px;
+        justify-content: flex-end;
+        padding: 0 22.5px 14px;
+        label {
+            color: get-color(neutral, darkGray);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.8px;
+        }
+        select {
+            color: get-color(neutral, darkGray);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.8px; 
+            background: transparent;
+            padding: 8px 14px;
+            border-radius: 100px;
+            border: 2px solid get-color(neutral, gray);
+        }
+    }
+} 

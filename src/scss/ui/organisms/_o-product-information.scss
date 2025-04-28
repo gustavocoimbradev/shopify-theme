@@ -11,6 +11,8 @@
 
     &__gallery {
         width: 522px;
+        position: sticky;
+        top: 120px;
 
         @include mobile {
             width: 100%;
@@ -26,6 +28,8 @@
                     top: 50%;
                     z-index: 22;
                     cursor: pointer;
+                    scale: .7;
+                    filter: invert(1) contrast(100);
 
                     &.slick-prev {
                         left: 22px;

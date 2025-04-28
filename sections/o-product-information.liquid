@@ -13,18 +13,20 @@
                     </figure>
                 {% endfor %}
             </div>
-            <div class="o-product-information__gallery__images o-product-information__gallery__images--all js-gallery-all">
-                {% for image in product.images %}
-                <figure>
-                    <img
-                    src="{{ image | image_url: width: 167 }}"
-                    alt="{{ image.alt | escape }}"
-                    width="167"
-                    height="167"
-                    >
-                </figure>
-                {% endfor %}
-            </div>
+            {% if product.images.size > 1 %}
+                <div class="o-product-information__gallery__images o-product-information__gallery__images--all js-gallery-all">
+                    {% for image in product.images %}
+                        <figure>
+                            <img
+                            src="{{ image | image_url: width: 167 }}"
+                            alt="{{ image.alt | escape }}"
+                            width="167"
+                            height="167"
+                            >
+                        </figure>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <div class="o-product-information__main">
             <h2 class="o-product-information__main__title">
@@ -70,9 +72,9 @@
                     <span>Adicionar ao carrinho</span>
                 </button>
             </form>
-            <div class="o-product-information__main__shipping">
+            {% comment %} <div class="o-product-information__main__shipping">
                 // TODO: ADICIONAR WIDGET DE CALCULO DE FRETE
-            </div>
+            </div> {% endcomment %}
             <div class="o-product-information__main__description">
                 {{ product.description }}
             </div>

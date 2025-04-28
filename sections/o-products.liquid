@@ -1,0 +1,7 @@
+<section class="o-products" data-aos="fade-in">
+    <div class="container js-products">
+        {% for product in collections.all.products %}
+            {% render 'm-card', product: product %}
+        {% endfor %}
+    </div>
+</section>
