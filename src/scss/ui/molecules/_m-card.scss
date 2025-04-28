@@ -16,7 +16,7 @@
         width: 100%;
         overflow: hidden;
         border-radius: 10px;
-        margin: 0;
+        margin: 0 0 6px;
         @include mobile {
             height: 161px;
         }
@@ -50,6 +50,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin: 2px 0 0;
     }
     >a:last-of-type {
         margin: 8px 0 0;  

@@ -1,5 +1,5 @@
 .a-stars {
-    margin: 0;
+    margin: 0 0 5px;
     .star {
         width: 18px;
         display: inline-block;
@@ -9,8 +9,11 @@
                 fill: get-color(secondary, 100);
             }
         }
-        .jdgm-prev-badge__text {
-            display: none !important;
-        }
+    }
+    .jdgm-prev-badge__text {
+        display: none;
+    }
+    .jdgm-widget, .jdgm-prev-badge[data-average-rating="0.00"] {
+        display: block !important;
     }
 }
