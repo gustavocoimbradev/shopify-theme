@@ -54,6 +54,20 @@
             <div class="o-cart__item-extra">
               <p class="o-cart__item-final-price">{{ item.final_price | times: item.quantity | money }}</p>
             </div>
+
+            <div class="o-cart__item-remove">
+              <form method="post" action="/cart/change" class="o-cart__qty-form">
+                  <input type="hidden" name="id" value="{{ item.key }}">
+
+                  <button
+                    type="submit"
+                    name="quantity"
+                    value="0"
+                    class="o-cart__item-quantity-increase"
+                  >
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg>                </form>
+            </div>
+
           </div>
         {% endfor %}
       </div>
