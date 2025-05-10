@@ -1,27 +1,30 @@
 <!doctype html>
 <html>
-    <head>
-        {{ content_for_header }}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-        {% comment %} <link rel="stylesheet" type="text/css" href="//unpkg.com/aos@2.3.1/dist/aos.css"/> {% endcomment %}
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
-        {% if template.name and template.name != blank %}
-            <link rel="stylesheet" href="{{ template.name | append: '.min.css' | asset_url }}">
-        {% endif %}
-    </head>
-    <body>
-        {% render 'o-header' %}
-        {{ content_for_layout }}
-        {% render 'o-footer' %}
-        <script src="https://cdn.yampi.com.br/checkout/v1/checkout.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-        <script type="text/javascript" src="//unpkg.com/aos@2.3.1/dist/aos.js" defer></script> 
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-        <script src="{{ 'global.min.js' | asset_url }}" defer></script>
-        {% if template.name and template.name != blank %}
-            <script src="{{ template.name | append: '.min.js' | asset_url }}" defer></script>
-        {% endif %}
-    </body>
+  <head>
+    {{ content_for_header }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    {% comment %} <link rel="stylesheet" type="text/css" href="//unpkg.com/aos@2.3.1/dist/aos.css"/> {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="{{ 'global.min.css' | asset_url }}">
+    {% if template.name and template.name != blank %}
+      <link rel="stylesheet" href="{{ template.name | append: '.min.css' | asset_url }}">
+    {% endif %}
+  </head>
+  <body>
+    {% render 'o-header' %}
+    {{ content_for_layout }}
+    {% render 'o-footer' %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script src="{{ 'global.min.js' | asset_url }}" defer></script>
+    {% if template.name and template.name != blank %}
+      <script src="{{ template.name | append: '.min.js' | asset_url }}" defer></script>
+    {% endif %}
+  </body>
+  <!-- Não remova. Checkout Yampi. -->
+  {% capture yampi_snippet_content %}{% include 'YampiSnippet' %}{% endcapture %}
+  {% unless yampi_snippet_content contains 'Liquid error' %} {% include 'YampiSnippet' %} {% endunless %}
+  <!-- Não remova. Checkout Yampi. -->
 </html>

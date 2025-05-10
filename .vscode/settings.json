@@ -1,7 +1,7 @@
 {
   "files.exclude": {
     "temp": true,
-    "**/assets": true,
+    // "**/assets": true,
     "**/*.css.map": true,
     "**/*.min.css": true,
     "**/*.min.js": true,
@@ -10,7 +10,7 @@
   },
   "search.exclude": {
     "temp": true,
-    "**/assets": true,
+    // "**/assets": true,
     "**/*.css.map": true,
     "**/*.min.css": true,
     "**/*.min.js": true,
