@@ -1,0 +1,145 @@
+.o-cart {
+  padding: 2rem 1rem 6rem;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1a1a5e;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+
+    &-image {
+      img {
+        width: 100px;
+        border-radius: 4px;
+      }
+    }
+
+    &-details {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    &-price {
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    &-extra {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      width: 150px;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-quantity {
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        width: 250px;
+      &-field {
+        position: relative;
+        width: max-content;
+
+        button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 16px;
+          font-weight: 900;
+          color: #999;
+          cursor: pointer;
+
+          &.o-cart__item-quantity-decrease {
+            left: 10px;
+          }
+
+          &.o-cart__item-quantity-increase {
+            right: 10px;
+          }
+        }
+
+        input {
+          border-radius: 10px;
+          border: 2px solid #dedede;
+          text-align: center;
+          height: 40px;
+          color: #333;
+          font-size: 16px;
+          width: 180px;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-remove {
+      background: none;
+      border: none;
+      color: #e74c3c;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      margin-top: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__summary {
+    margin-top: 2rem;
+    text-align: right;
+
+    .a-button {
+      color: #fff !important;
+      text-transform: uppercase;
+    }
+  }
+
+  &__total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+  }
+}

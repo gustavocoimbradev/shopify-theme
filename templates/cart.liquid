@@ -1,15 +1,7 @@
-<h2>Carrinho</h2>
-
-{% for item in cart.items %}
-    <h2>{{ item.product.title }}</h2>
-    <p>Quantidade: {{ item.quantity }}</p>
-    <p>Preço: {{ item.line_price | money }}</p>
-
-    <form method="post" action="/cart/change">
-        <input type="hidden" name="id" value="{{ item.key }}">
-        <input type="hidden" name="quantity" value="0">
-        <button type="submit">Remover</button>
-    </form>
-    
-{% endfor %}
-<p>Total: {{ cart.total_price | money }}</p>
+<main class="page">
+    <div class="container">
+        <div>
+            {% section 'o-cart' %}
+        </div>
+    </div>
+</main>  

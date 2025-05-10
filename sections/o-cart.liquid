@@ -1,0 +1,82 @@
+<section class="o-cart" data-aos="fade-in">
+  <div class="o-cart__container">
+    {% if cart.item_count > 0 %}
+      <h1 class="o-cart__title">Seu Carrinho</h1>
+
+      <div class="o-cart__items">
+        {% for item in cart.items %}
+          <div class="o-cart__item">
+            <div class="o-cart__item-image">
+              <img src="{{ item.image | img_url: 'medium' }}" alt="{{ item.product.title }}">
+            </div>
+
+            <div class="o-cart__item-details">
+              <h2 class="o-cart__item-title">{{ item.product.title }}</h2>
+            </div>
+
+            <div class="o-cart__item-price">
+              <p class="o-cart__item-single-price">{{ item.price | money }}</p>
+            </div>
+
+            <div class="o-cart__item-quantity">
+              <div class="o-cart__item-quantity-field">
+                <form method="post" action="/cart/change" class="o-cart__qty-form">
+                  <input type="hidden" name="id" value="{{ item.key }}">
+
+                  <button
+                    type="submit"
+                    name="quantity"
+                    value="{{ item.quantity | minus: 1 }}"
+                    class="o-cart__item-quantity-decrease"
+                    {% if item.quantity <= 1 %}
+                      disabled
+                    {% endif %}
+                  >
+                    -
+                  </button>
+                </form>
+                <input readonly type="text" name="quantity" value="{{ item.quantity }}">
+                <form method="post" action="/cart/change" class="o-cart__qty-form">
+                  <input type="hidden" name="id" value="{{ item.key }}">
+
+                  <button
+                    type="submit"
+                    name="quantity"
+                    value="{{ item.quantity | plus: 1 }}"
+                    class="o-cart__item-quantity-increase"
+                  >
+                    +
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="o-cart__item-extra">
+              <p class="o-cart__item-final-price">{{ item.final_price | times: item.quantity | money }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="o-cart__summary">
+        <p class="o-cart__total">
+          <strong>Total: {{ cart.total_price | money }}</strong>
+
+          {% assign desconto_pix = cart.total_price | times: settings.pix | divided_by: 100.0 %}
+          {% assign preco_pix = cart.total_price | minus: desconto_pix %}
+
+          {% if settings.pix > 0 %}
+            <p class="o-product-information__main__pix">
+              Ou <strong>{{ preco_pix | money }}</strong> à vista no <strong>PIX com {{ settings.pix }}% OFF</strong>
+            </p>
+          {% endif %}
+        </p><br/><br/>
+        <a href="/checkout" class="a-button a-button--gradient-primary a-button--normal a-button-text-white"
+          >Ir para o checkout</a
+        >
+      </div>
+    {% else %}
+      <p class="o-cart__empty">Seu carrinho está vazio.</p>
+    {% endif %}
+  </div>
+</section>
