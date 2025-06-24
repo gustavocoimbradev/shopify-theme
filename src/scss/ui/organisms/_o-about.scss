@@ -5,12 +5,12 @@
     }
     &__title {
         text-align: center;
-        margin: 0 0 24px;
+        margin: 0 0 50px;
     }
     &__content {
         display: flex;
-        gap: 20px;
         align-items: center;
+        gap: 60px;
         @include mobile {
             flex-direction: column-reverse;
         }
