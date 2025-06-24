@@ -28,6 +28,12 @@
                     h5 {    
                         color: get-color(primary, 200);
                     } 
+                    p {
+                        @include mobile {
+                            font-size: 14px;
+                            margin: 6px 0 0;
+                        }
+                    }
                 }
                 &:hover {
                     scale: 1.1;

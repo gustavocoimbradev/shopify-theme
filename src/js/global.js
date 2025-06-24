@@ -1,8 +1,5 @@
 $(function () {
 
-    // AOS
-    AOS.init({ duration: 1500 });
-
     // Links
     $('a').filter(function () {
       const href = $(this).attr('href');

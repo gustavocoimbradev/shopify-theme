@@ -1,8 +1,17 @@
 .m-breadcrumb {
     margin: 20px 0 32px;
     a {
+        // opacity: .4;
         &:hover {
             text-decoration: underline;
         }
+    }
+    span.divider {
+        // opacity: .4;
+        margin: 0 6px;
+    }
+    span.is-active {
+        color: get-color(primary, 100);
+        font-weight: 500;
     }
 }

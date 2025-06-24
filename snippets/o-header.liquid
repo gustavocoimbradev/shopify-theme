@@ -13,6 +13,10 @@
         {% endif %}
       </div>
       <div class="o-header__top__right">
+        <form action="/search">
+            <input type="search" name="q" placeholder="Buscar produto..." required>
+            <button>Buscar</button>
+        </form>
         <a href="javascript:void(0)" class="js-toggle-search">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 14.0314L20 20.0314M9 16.0314C5.13401 16.0314 2 12.8974 2 9.03143C2 5.16544 5.13401 2.03143 9 2.03143C12.866 2.03143 16 5.16544 16 9.03143C16 12.8974 12.866 16.0314 9 16.0314Z" stroke="#333333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,16 +57,21 @@
 {% unless template == 'index' %}
   <nav class="m-breadcrumb">
     <div class="container">
-        <a href="{{ routes.root_url }}">Página Inicial</a>
-            {% if template contains 'collection' and collection %}
-            / {{ collection.title }}
-            {% elsif template contains 'product' and product %}
-            / <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a> / {{ product.title }}
-            {% elsif template contains 'page' and page %}
-            / {{ page.title }}
-            {% elsif template contains 'article' and article %}
-            / <a href="{{ blog.url }}">{{ blog.title }}</a> / {{ article.title }}
-        {% endif %}
+      <a href="{{ routes.root_url }}">Página Inicial</a>
+      {% if template == '404' %}
+        <span class="divider">/</span> <span class="is-active">404</span>
+      {% elsif template == 'cart' %}
+        <span class="divider">/</span> <span class="is-active">Carrinho</span>
+      {% elsif template contains 'collection' and collection %}
+        <span class="divider">/</span> <span class="is-active">{{ collection.title }}</span>
+      {% elsif template contains 'product' and product %}
+        <span class="divider">/</span> <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a> <span class="divider">/</span> <span class="is-active">{{ product.title }}</span>
+      {% elsif template contains 'page' and page %}
+        <span class="divider">/</span> <span class="is-active">{{ page.title }}</span>
+      {% elsif template contains 'article' and article %}
+        <span class="divider">/</span> <a href="{{ blog.url }}">{{ blog.title }}</a> <span class="divider">/</span> <span class="is-active">{{ article.title }}</span>
+      {% endif %}
     </div>
   </nav>
 {% endunless %}
+

@@ -1,6 +1,12 @@
 <section class="o-products" data-aos="fade-in">
   <div class="container js-products">
-    {% if collection %}
+    {% if template == 'search' %}
+      {% for item in search.results %}
+        {% if item.object_type == 'product' %}
+          {% render 'm-card', product: item %}
+        {% endif %}
+      {% endfor %}
+    {% elsif collection %}
       {% for product in collection.products %}
         {% render 'm-card', product: product %}
       {% endfor %}

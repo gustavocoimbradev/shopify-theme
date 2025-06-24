@@ -6,6 +6,9 @@
     &__title {
         text-align: center;
         margin: 0 0 50px;
+        @include mobile {
+            margin: 0 0 24px;
+        }
     }
     &__content {
         display: flex;
@@ -13,6 +16,7 @@
         gap: 60px;
         @include mobile {
             flex-direction: column-reverse;
+            gap: 30px;
         } 
         &__text {
             flex: 1;

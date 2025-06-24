@@ -30,7 +30,7 @@
         &__item {
             flex: 1;
             @include mobile {
-                flex: 0 0 calc(100% / 3);
+                flex: 0 0 calc(100% / 2);
                 scroll-snap-align: start;
                 scroll-snap-stop: always;
             }

@@ -29,12 +29,9 @@ $(function(){
             {
                 breakpoint: 992, 
                 settings: {
-                    variableWidth: true,
-                    arrows: false,
-                    centerMode: true,
-                    infinite: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                 }
             }
         ]

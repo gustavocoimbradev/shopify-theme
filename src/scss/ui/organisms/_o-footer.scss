@@ -1,51 +1,80 @@
-.o-footer { 
+.o-footer {
+    margin: auto 0 0;
+
     &__top {
         background: linear-gradient(90deg, get-color(primary, 200) 0%, get-color(primary, 300) 100%);
-        padding: 60px 0; 
+        padding: 60px 0;
+
         &__primary {
             padding: 0 0 60px;
             display: flex;
             gap: 96px;
+
             @include mobile {
                 flex-direction: column;
                 gap: 40px;
             }
+
             * {
                 color: get-color(neutral, white);
             }
+
             >div {
                 &:first-of-type {
                     display: flex;
                     gap: 29px;
                     align-items: center;
+
+                    @include mobile {
+                        a {
+                            width: 100%;
+                            display: grid;
+                            place-items: center;
+                            margin: 0 0 44px;
+                            img {
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+
                     p {
                         text-align: center;
                         margin: 19px 0 0;
                     }
+
                     @include mobile {
                         flex-direction: column;
+
                         h5 {
                             text-align: center;
                             max-width: 258px;
                         }
                     }
                 }
+
                 &:not(:first-of-type) {
                     h5 {
                         margin: 0 0 16px;
                         white-space: nowrap;
+
                         @include mobile {
                             text-align: center;
+                            white-space: unset;
                         }
                     }
+
                     ul {
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
                         white-space: nowrap;
+
                         @include mobile {
                             text-align: center;
+                            white-space: unset;
                         }
+
                         li {
                             a {
                                 &:hover {
@@ -57,19 +86,23 @@
                 }
             }
         }
+
         &__secondary {
             display: flex;
             justify-content: space-between;
             gap: 30px;
+
             @include mobile {
                 flex-direction: column;
             }
+
             div {
                 @include mobile {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 }
+
                 h6 {
                     color: get-color(neutral, lightGray);
                     text-align: center;
@@ -79,9 +112,11 @@
                     line-height: normal;
                     margin: 0 0 9px;
                 }
+
                 img {
                     height: 40px;
                     max-width: 100%;
+
                     @include mobile {
                         height: auto;
                         max-height: 40px;
@@ -90,11 +125,13 @@
             }
         }
     }
+
     &__bottom {
         background: get-color(secondary, 100);
         padding: 20px 0;
         display: flex;
         place-items: center;
+
         span {
             color: #000;
             font-size: 16px;

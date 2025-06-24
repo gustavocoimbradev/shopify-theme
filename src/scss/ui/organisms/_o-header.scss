@@ -54,6 +54,32 @@
         &__right {
             display: flex;
             gap: 16px;
+            align-items: center;
+            form {
+                border-radius: 16px;
+                height: 40px;
+                display: flex;
+                overflow: hidden;
+                transform: translateY(-4px);
+                input {
+                    border-radius: 16px 0 0 16px;
+                    padding: 0 16px;
+                    border: solid 1px rgb(173, 173, 173);
+                    border-right-width: 0;
+                }
+                button {
+                    background: get-color(primary, 100);
+                    color: #fff;
+                    padding: 0 16px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    transition: all .3s;
+                    &:hover {
+                        background: get-color(primary, 200) !important;
+                    }
+                }
+            }
         }
     }
 
