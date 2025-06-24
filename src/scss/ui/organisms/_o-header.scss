@@ -178,7 +178,26 @@
             a {
                 display: flex;
                 align-items: center;
+                position: relative;
+                .badge {
+                    position: absolute;
+                    background: get-color(secondary, 100);
+                    top: -10px;
+                    right: -20px;
+                    border-radius: 100%;
+                    width: 22px;
+                    height: 22px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    color: get-color(primary, 100);
+                    z-index: -1;
+                }
             }
+
+            
+
         }
     }
 
