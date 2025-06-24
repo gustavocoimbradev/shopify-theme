@@ -51,6 +51,7 @@
         &__left {
             img {
                 width: 200px;
+
                 @include mobile {
                     width: 130px;
                 }
@@ -80,6 +81,8 @@
                     height: 100%;
                     align-items: center;
                     justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
                 }
 
                 span {
@@ -92,6 +95,7 @@
                     color: #fff;
                     cursor: pointer;
                     user-select: none;
+
                     @include mobile {
                         opacity: 1;
                         pointer-events: unset;
@@ -135,10 +139,15 @@
                     background: #fff;
 
 
+
                     @include mobile {
                         border: none;
-                        height: 40px;
-                        max-width: calc(100% - 100px);
+                        height: 50px;
+                        width: 100%;
+                        max-width: calc(100% - 40px);
+                        border-radius: 16px;
+                        text-align: center;
+                        font-size: 16px;
                     }
                 }
 
@@ -152,9 +161,14 @@
                     transition: all .3s;
                     border-radius: 0 16px 16px 0;
 
-                        @include mobile {
-                        height: 40px;
+                    @include mobile {
+                        height: 50px;
+                        border-radius: 16px;
+                        width: 100%;
+                        max-width: calc(100% - 40px);
+                        font-size: 16px;
                     }
+
                     &:hover {
                         background: get-color(primary, 200) !important;
                     }
