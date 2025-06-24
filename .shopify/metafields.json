@@ -12,8 +12,8 @@
     {
       "key": "rating",
       "namespace": "reviews",
-      "name": "Product rating",
-      "description": "Average rating from customers",
+      "name": "Avaliação do produto",
+      "description": "Avaliação média de clientes",
       "type": {
         "name": "rating",
         "category": "RATING"
@@ -22,11 +22,41 @@
     {
       "key": "rating_count",
       "namespace": "reviews",
-      "name": "Product rating count",
-      "description": "Total number of ratings from customers",
+      "name": "Contagem de avaliações do produto",
+      "description": "Número total de avaliações de clientes",
       "type": {
         "name": "number_integer",
         "category": "NUMBER"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Cor",
+      "description": "Define a cor ou padrão principal, como azul ou listrado",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "power-source",
+      "namespace": "shopify",
+      "name": "Fonte de energia",
+      "description": "Especifica a fonte de energia que um produto usa para operar, como energia solar ou baterias",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "connection-type",
+      "namespace": "shopify",
+      "name": "Tipo de conexão",
+      "description": "Especifica o tipo de conexão usada pelos eletrônicos, como com fio ou Bluetooth",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
       }
     }
   ],
