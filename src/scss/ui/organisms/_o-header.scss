@@ -107,8 +107,8 @@
 
                     &::before {
                         content: "";
-                        width: 100dvw;
-                        height: 100dvh;
+                        width: calc(100dvw + 5px);
+                        height: calc(100dvh + 5px);
                         position: absolute;
                         top: 50%;
                         left: 50%;
